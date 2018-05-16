@@ -1,12 +1,13 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class NewDownloadFrame extends JFrame
 {
     private JTabbedPane tabs;
-    private JTextField URL;
-    private JTextField fileName;
-    private JLabel fileSize;
-    private JTextField filePath;
+    private JTextField URLFileld;
+    private JTextField nameField;
+    private JLabel sizeLabel;
+    private JTextField pathField;
 
     private JButton generalButton;
 
@@ -16,9 +17,19 @@ public class NewDownloadFrame extends JFrame
 
     public NewDownloadFrame()
     {
-        setName("New Download");
-
+        super("New Download");
+        setLayout(new BorderLayout());
+        setSize(350, 200);
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(50, 54, 63));
+        setDefaultCloseOperation(SettingFrame.HIDE_ON_CLOSE);
+        showFrame();
     }
 
+    public void showFrame()
+    {
+        repaint();
+        setVisible(true);
+    }
 
 }

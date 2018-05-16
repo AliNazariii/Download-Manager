@@ -1,12 +1,6 @@
-import javafx.scene.control.ToolBar;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 /**
  * This is the Main Frame of the download manager that will be shown...
@@ -51,12 +45,19 @@ public class DownloadManagerFrame extends JFrame
 
     private JPanel downloadManagerLogo;
 
-    private JPanel leftButtonPanel;
+    private JToolBar leftToolBar;
     private JButton processingButton;
-    private JButton downloadingButton;
+    private JButton completedButton;
     private JButton queueButton;
 
     private JPanel myLogo;
+
+
+    private SettingFrame settingFrame;
+
+    private AboutFrame aboutFrame;
+
+    private NewDownloadFrame newDownloadFrame;
 
 
 
@@ -79,6 +80,9 @@ public class DownloadManagerFrame extends JFrame
         setMenuBar();
         setLeftSide();
         setRightSide();
+
+        completedDownloads = new CompletedDownloads();
+        downloadQueue = new DownloadQueue();
     }
 
 
@@ -200,6 +204,46 @@ public class DownloadManagerFrame extends JFrame
         downloadManagerLogo.setOpaque(false);
         //at last, I added the logo panel to the left panel
         leftSide.add(downloadManagerLogo, BorderLayout.NORTH);
+
+
+        //here I create the leftSide Toolbar for 3 buttons that contains downloadLists
+        leftToolBar = new JToolBar(JToolBar.VERTICAL);
+        leftToolBar.setFloatable(false);
+        leftToolBar.setBackground(new Color(50, 54, 63));
+
+        Icon processingIcon = new ImageIcon(getClass().getResource("processingIcon.png"));
+        processingButton = new JButton("Processing", processingIcon);
+        processingButton.setForeground(new Color(255, 255, 255));
+        processingButton.setOpaque(false);
+        processingButton.setFocusable(false);
+        processingButton.addMouseListener(new MouseHandler());
+
+        Icon completedIcon = new ImageIcon(getClass().getResource("completedIcon.png"));
+        completedButton = new JButton("Completed", completedIcon);
+        completedButton.setForeground(new Color(255, 255, 255));
+        completedButton.setOpaque(false);
+        completedButton.setFocusable(false);
+        completedButton.addMouseListener(new MouseHandler());
+
+        Icon queueIcon = new ImageIcon(getClass().getResource("queueIcon.png"));
+        queueButton = new JButton("Queue", queueIcon);
+        queueButton.setForeground(new Color(255, 255, 255));
+        queueButton.setOpaque(false);
+        queueButton.setFocusable(false);
+        queueButton.addMouseListener(new MouseHandler());
+
+        leftToolBar.add(Box.createRigidArea(new Dimension(0,20)));
+        leftToolBar.add(new JSeparator(SwingConstants.HORIZONTAL));
+        leftToolBar.add(processingButton);
+        leftToolBar.add(new JSeparator(SwingConstants.HORIZONTAL));
+        leftToolBar.add(completedButton);
+        leftToolBar.add(new JSeparator(SwingConstants.HORIZONTAL));
+        leftToolBar.add(queueButton);
+        leftToolBar.add(new JSeparator(SwingConstants.HORIZONTAL));
+        leftToolBar.add(Box.createRigidArea(new Dimension(0,300)));
+
+        leftSide.add(leftToolBar, BorderLayout.CENTER);
+
 
 
         //create the author's panel to add to the left panel
@@ -380,9 +424,7 @@ public class DownloadManagerFrame extends JFrame
      */
     public void setDownloadLists()
     {
-        //
-        completedDownloads = new CompletedDownloads();
-        rightSide.add(completedDownloads, BorderLayout.CENTER);
+        //rightSide.add(completedDownloads, BorderLayout.CENTER);
 
 
         //at last I add the right panel to the main frame
@@ -399,6 +441,20 @@ public class DownloadManagerFrame extends JFrame
         setVisible(true);
     }
 
+    public void setSettingFrame()
+    {
+        settingFrame = new SettingFrame();
+    }
+
+    public void setAboutFrame()
+    {
+        aboutFrame = new AboutFrame();
+    }
+
+    public void setNewDownloadFrame()
+    {
+        newDownloadFrame = new NewDownloadFrame();
+    }
 
     /**
      * I handle the actions that happen with Mouse here
@@ -411,6 +467,7 @@ public class DownloadManagerFrame extends JFrame
             if (e.getSource().equals(newDownloadButton))
             {
                 System.out.println("newDownloadButton");
+                setNewDownloadFrame();
             }
             else if (e.getSource().equals(resumeButton))
             {
@@ -431,6 +488,19 @@ public class DownloadManagerFrame extends JFrame
             else if (e.getSource().equals(settingButton))
             {
                 System.out.println("settingButton");
+                setSettingFrame();
+            }
+            else if (e.getSource().equals(queueButton))
+            {
+                System.out.println("queueButton");
+            }
+            else if (e.getSource().equals(completedButton))
+            {
+                System.out.println("completedButton");
+            }
+            else if (e.getSource().equals(processingButton))
+            {
+                System.out.println("processingButton");
             }
             else
             {
@@ -443,6 +513,7 @@ public class DownloadManagerFrame extends JFrame
             if (e.getSource().equals(newDownloadMenuItem))
             {
                 System.out.println("newDownloadMenuItem");
+                setNewDownloadFrame();
             }
             else if (e.getSource().equals(resumeMenuItem))
             {
@@ -463,6 +534,7 @@ public class DownloadManagerFrame extends JFrame
             else if (e.getSource().equals(settingMenuItem))
             {
                 System.out.println("settingMenuItem");
+                setSettingFrame();
             }
             else if (e.getSource().equals(exitMenuItem))
             {
@@ -471,6 +543,7 @@ public class DownloadManagerFrame extends JFrame
             else if (e.getSource().equals(aboutMenuItem))
             {
                 System.out.println("aboutMenuItem");
+                setAboutFrame();
             }
 
         }
