@@ -1,3 +1,5 @@
+import javafx.scene.control.ToolBar;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +15,6 @@ public class DownloadManagerFrame extends JFrame
 {
     private JMenuBar menuBar;
     private JMenu helpMenu;
-
     private JMenu downloadMenu;
     private JMenuItem newDownloadMenuItem;
     private JMenuItem pauseMenuItem;
@@ -22,22 +23,28 @@ public class DownloadManagerFrame extends JFrame
     private JMenuItem RemoveMenuItem;
     private JMenuItem settingMenuItem;
 
+
     private CompletedDownloads completedDownloads;
     private DownloadQueue downloadQueue;
 
+
+    private JToolBar toolBar;
     private JButton newDownloadButton;
     private JButton pauseButton;
     private JButton resumeButton;
     private JButton cancelButton;
+    private JButton sortButton;
     private JButton removeButton;
+    private JButton videoSnifferButton;
+    private JButton mediaGrabberButton;
+    private JButton batchDownloadButton;
     private JButton settingButton;
+    private JTextField filterFilesTextField;
 
-    private JPanel buttonPanel;
 
     private JPanel downloadManagerLogo;
 
     private JPanel leftSide;
-
     private JPanel rightSide;
 
 
@@ -47,30 +54,14 @@ public class DownloadManagerFrame extends JFrame
         super(name);
 
         //this is the size of the Main Frame
-        setSize(750, 600);
+        setSize(800, 600);
         //if the client click on the exit, the program will go to the system tray
         setDefaultCloseOperation(DownloadManagerFrame.EXIT_ON_CLOSE);
         //put the main frame to the center of the screen
         setLocationRelativeTo(null);
         //set the Layout Manager
-        getContentPane().setLayout(new GridLayout(1, 2));
+        getContentPane().setLayout(new BorderLayout());
 
-
-        /*
-        This panel is for Logo and the tabs like (Queue and downloadList)
-        the first row is for logo
-        and the second row is for tabs
-         */
-        leftSide = new JPanel(new GridLayout(2, 1));
-
-
-
-        /*
-        This panel contains buttons and also list of the downloads
-        the first row is the buttons.
-        the second row is for the list and the other things
-         */
-        rightSide = new JPanel(new GridLayout(2, 1));
 
 
         //new the menu bar
@@ -117,46 +108,121 @@ public class DownloadManagerFrame extends JFrame
 
 
 
+        /*
+        This panel is for Logo and the tabs like (Queue and downloadList)
+        the first row is for logo
+        and the second row is for tabs
+         */
+        leftSide = new JPanel(new BorderLayout());
+        leftSide.setBackground(new Color(50, 54, 63));
+
 
         //add the JDM Logo to the Frame
         downloadManagerLogo = new JPanel();
         ImageIcon thisLogo = new ImageIcon(getClass().getResource("logoInFrame.png"));
         JLabel logo = new JLabel(thisLogo);
         downloadManagerLogo.add(logo);
-        add(downloadManagerLogo, BorderLayout.WEST);
+        //use transparent of the picture not to show the white background under the eagle
+        downloadManagerLogo.setOpaque(false);
+        leftSide.add(downloadManagerLogo, BorderLayout.NORTH);
+
+        add(leftSide, BorderLayout.WEST);
 
 
 
+        /*
+        This panel contains buttons and also list of the downloads
+        the first row is the buttons.
+        the second row is for the list and the other things
+         */
+        rightSide = new JPanel(new BorderLayout());
+        rightSide.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        //rightSide.setBackground(Color.RGBtoHSB(50, 54, 63, 222));
 
-        //create the panel of the buttons and set the size and location of it
-        buttonPanel = new JPanel(new GridLayout(1, 6, 3, 3));
-        buttonPanel.setPreferredSize(new Dimension(20, 30));
-        //create the newDownload button and set the icon and size
+
+        //create the toolbar of the buttons and avoid being floating
+        toolBar = new JToolBar();
+        toolBar.setFloatable(false);
+        //create the newDownload button and set the icon
         Icon newDownloadIcon = new ImageIcon(getClass().getResource("newDownloadIcon.png"));
         newDownloadButton = new JButton(newDownloadIcon);
-        //create the pause button and set the icon and size
+        newDownloadButton.setFocusable(false);
+        //create the pause button and set the icon
         Icon pauseIcon = new ImageIcon(getClass().getResource("pauseIcon.png"));
         pauseButton = new JButton(pauseIcon);
-        //create the resume button and set the icon and size
+        pauseButton.setFocusable(false);
+        //create the resume button and set the icon
         Icon resumeIcon = new ImageIcon(getClass().getResource("resumeIcon.png"));
         resumeButton = new JButton(resumeIcon);
-        //create the cancel button and set the icon and size
+        resumeButton.setFocusable(false);
+        //create the cancel button and set the icon
         Icon cancelIcon = new ImageIcon(getClass().getResource("cancelIcon.png"));
         cancelButton = new JButton(cancelIcon);
-        //create the remove button and set the icon and size
+        cancelButton.setFocusable(false);
+        //create the sort button and set the icon
+        Icon sortIcon = new ImageIcon(getClass().getResource("sortIcon.png"));
+        sortButton = new JButton(sortIcon);
+        sortButton.setFocusable(false);
+        //create the remove button and set the icon
         Icon removeIcon = new ImageIcon(getClass().getResource("removeIcon.png"));
         removeButton = new JButton(removeIcon);
-        //create the setting button and set the icon and size
+        removeButton.setFocusable(false);
+        //create the videoSniffer button and set the icon
+        Icon videoSnifferIcon = new ImageIcon(getClass().getResource("videoSnifferIcon.png"));
+        videoSnifferButton = new JButton(videoSnifferIcon);
+        videoSnifferButton.setFocusable(false);
+        //create the mediaGrabber button and set the icon
+        Icon mediaGrabberIcon = new ImageIcon(getClass().getResource("mediaGrabberIcon.png"));
+        mediaGrabberButton = new JButton(mediaGrabberIcon);
+        mediaGrabberButton.setFocusable(false);
+        //create the batchDownload button and set the icon
+        Icon batchDownloadIcon = new ImageIcon(getClass().getResource("batchDownloadIcon.png"));
+        batchDownloadButton = new JButton(batchDownloadIcon);
+        batchDownloadButton.setFocusable(false);
+        //create the setting button and set the icon
         Icon settingIcon = new ImageIcon(getClass().getResource("settingIcon.png"));
         settingButton = new JButton(settingIcon);
+        settingButton.setFocusable(false);
+        //textfield for filtering files by searching words
+        filterFilesTextField = new JTextField("Filter files...");
+        filterFilesTextField.setFocusable(false);
         //add the buttons to their panel
-        buttonPanel.add(newDownloadButton);
-        buttonPanel.add(pauseButton);
-        buttonPanel.add(resumeButton);
-        buttonPanel.add(cancelButton);
-        buttonPanel.add(removeButton);
-        buttonPanel.add(settingButton);
-        add(buttonPanel, BorderLayout.NORTH);
+        toolBar.add(Box.createRigidArea(new Dimension(20,0)));
+        toolBar.add(newDownloadButton);
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(new JSeparator(SwingConstants.VERTICAL));
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(resumeButton);
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(pauseButton);
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(cancelButton);
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(new JSeparator(SwingConstants.VERTICAL));
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(sortButton);
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(new JSeparator(SwingConstants.VERTICAL));
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(removeButton);
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(new JSeparator(SwingConstants.VERTICAL));
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(videoSnifferButton);
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(mediaGrabberButton);
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(batchDownloadButton);
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(new JSeparator(SwingConstants.VERTICAL));
+        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(settingButton);
+        toolBar.add(Box.createRigidArea(new Dimension(30,0)));
+        toolBar.add(filterFilesTextField);
+        toolBar.add(Box.createRigidArea(new Dimension(1,0)));
+
+        rightSide.add(toolBar, BorderLayout.NORTH);
+        add(rightSide, BorderLayout.CENTER);
     }
 
     /**
