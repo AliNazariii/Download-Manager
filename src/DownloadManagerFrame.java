@@ -50,7 +50,15 @@ public class DownloadManagerFrame extends JFrame
     private JPanel leftSide;
 
     private JPanel downloadManagerLogo;
+
+    private JPanel leftButtonPanel;
+    private JButton processingButton;
+    private JButton downloadingButton;
+    private JButton queueButton;
+
     private JPanel myLogo;
+
+
 
 
 
@@ -223,7 +231,15 @@ public class DownloadManagerFrame extends JFrame
         rightSide = new JPanel(new BorderLayout());
         rightSide.setBackground(new Color(231, 239, 251));
 
+        setToolBar();
+        setDownloadLists();
+    }
 
+    /**
+     * This method do the ToolBar part of the setRightSide method
+     */
+    public void setToolBar()
+    {
         //create the toolbar of the buttons and avoid being floating
         toolBar = new JToolBar();
         toolBar.setFloatable(false);
@@ -357,8 +373,14 @@ public class DownloadManagerFrame extends JFrame
 
         //add the toolBar to the NORTH of the right panel
         rightSide.add(toolBar, BorderLayout.NORTH);
+    }
 
-
+    /**
+     * This method do the DownloadLists of the setRightSide method
+     */
+    public void setDownloadLists()
+    {
+        //
         completedDownloads = new CompletedDownloads();
         rightSide.add(completedDownloads, BorderLayout.CENTER);
 
@@ -366,7 +388,6 @@ public class DownloadManagerFrame extends JFrame
         //at last I add the right panel to the main frame
         add(rightSide, BorderLayout.CENTER);
     }
-
 
     /**
      * This method will make the Main frame visible to show on the screens.
@@ -387,46 +408,71 @@ public class DownloadManagerFrame extends JFrame
         @Override
         public void mouseClicked(MouseEvent e)
         {
-            if (e.getSource().equals(newDownloadButton) || e.getSource().equals(newDownloadMenuItem))
+            if (e.getSource().equals(newDownloadButton))
             {
-                System.out.println("newDownload");
+                System.out.println("newDownloadButton");
             }
-            else if (e.getSource().equals(resumeButton) || e.getSource().equals(resumeMenuItem))
+            else if (e.getSource().equals(resumeButton))
             {
-                System.out.println("resume");
+                System.out.println("resumeButton");
             }
-            else if (e.getSource().equals(pauseButton) || e.getSource().equals(pauseMenuItem))
+            else if (e.getSource().equals(pauseButton))
             {
-                System.out.println("pause");
+                System.out.println("pauseButton");
             }
-            else if (e.getSource().equals(cancelButton) || e.getSource().equals(cancelMenuItem))
+            else if (e.getSource().equals(cancelButton))
             {
-                System.out.println("Cancel");
+                System.out.println("cancelButton");
             }
-            else if (e.getSource().equals(deleteButton) || e.getSource().equals(deleteMenuItem))
+            else if (e.getSource().equals(deleteButton))
             {
-                System.out.println("delete");
+                System.out.println("deleteButton");
             }
-            else if (e.getSource().equals(settingButton) || e.getSource().equals(settingMenuItem))
+            else if (e.getSource().equals(settingButton))
             {
-                System.out.println("setting");
-            }
-            else if (e.getSource().equals(exitMenuItem))
-            {
-                System.out.println("Exit");
-            }
-            else if (e.getSource().equals(aboutMenuItem))
-            {
-                System.out.println("about");
-            }
-            else if (e.getSource().equals(settingMenuItem))
-            {
-                System.out.println("Item");
+                System.out.println("settingButton");
             }
             else
             {
                 System.out.println("Extra Buttons");
             }
+        }
+
+        public void mousePressed(MouseEvent e)
+        {
+            if (e.getSource().equals(newDownloadMenuItem))
+            {
+                System.out.println("newDownloadMenuItem");
+            }
+            else if (e.getSource().equals(resumeMenuItem))
+            {
+                System.out.println("resumeMenuItem");
+            }
+            else if (e.getSource().equals(pauseMenuItem))
+            {
+                System.out.println("pauseMenuItem");
+            }
+            else if (e.getSource().equals(cancelMenuItem))
+            {
+                System.out.println("cancelMenuItem");
+            }
+            else if (e.getSource().equals(deleteMenuItem))
+            {
+                System.out.println("deleteMenuItem");
+            }
+            else if (e.getSource().equals(settingMenuItem))
+            {
+                System.out.println("settingMenuItem");
+            }
+            else if (e.getSource().equals(exitMenuItem))
+            {
+                System.out.println("exitMenuItem");
+            }
+            else if (e.getSource().equals(aboutMenuItem))
+            {
+                System.out.println("aboutMenuItem");
+            }
+
         }
     }
 
