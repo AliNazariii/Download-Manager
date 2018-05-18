@@ -2,26 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38a204c7-e8ac-4cb7-8700-d0d39cc69f99" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AboutDialog.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/AboutFrame.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame$MouseHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/New folder/completed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/New folder/processing.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/New folder/queue.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/NewDownloadFrame.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/SettingFrame.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/SettingFrame.class" />
-      <change beforePath="$PROJECT_DIR$/src/AboutFrame.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame$JDMMouseHandler.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/SettingFrame$MouseHandler.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/SettingFrame.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/CompletedDownloads.java" afterPath="$PROJECT_DIR$/src/CompletedDownloads.java" />
+      <change beforePath="$PROJECT_DIR$/src/Download.java" afterPath="$PROJECT_DIR$/src/Download.java" />
+      <change beforePath="$PROJECT_DIR$/src/DownloadInfo.java" afterPath="$PROJECT_DIR$/src/DownloadInfo.java" />
       <change beforePath="$PROJECT_DIR$/src/DownloadManagerFrame.java" afterPath="$PROJECT_DIR$/src/DownloadManagerFrame.java" />
-      <change beforePath="$PROJECT_DIR$/src/New folder/browse.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/New folder/completed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/New folder/processing.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/New folder/queue.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/New folder/url.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/NewDownloadFrame.java" afterPath="$PROJECT_DIR$/src/NewDownloadFrame.java" />
+      <change beforePath="$PROJECT_DIR$/src/DownloadQueue.java" afterPath="$PROJECT_DIR$/src/DownloadQueue.java" />
+      <change beforePath="$PROJECT_DIR$/src/New folder/details.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/New folder/mmkh.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/New folder/open.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/New folder/pause2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/New folder/remove.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/SettingFrame.java" afterPath="$PROJECT_DIR$/src/SettingFrame.java" />
-      <change beforePath="$PROJECT_DIR$/src/myIcon.png" afterPath="$PROJECT_DIR$/src/myIcon.png" />
+      <change beforePath="$PROJECT_DIR$/src/iconOfFrame.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,10 +35,12 @@
       <file leaf-file-name="DownloadManagerFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DownloadManagerFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="478" column="13" lean-forward="true" selection-start-line="478" selection-start-column="13" selection-end-line="478" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2800#2801#0" expanded="true" />
+                <element signature="e#2848#2849#0" expanded="true" />
                 <element signature="docComment;method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
                 <element signature="method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
                 <element signature="docComment;method#setLeftSide#0;class#DownloadManagerFrame#0" expanded="false" />
@@ -50,12 +48,50 @@
                 <element signature="docComment;method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
                 <element signature="method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
                 <element signature="docComment;method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
                 <element signature="docComment;method#setDownloadLists#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="docComment;method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="docComment;method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
                 <element signature="docComment;method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
                 <element signature="method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
-                <element signature="e#17155#17156#0" expanded="true" />
-                <element signature="e#17215#17216#0" expanded="true" />
+                <element signature="docComment;method#setSettingFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="e#20613#20614#0" expanded="true" />
+                <element signature="e#20662#20663#0" expanded="true" />
+                <element signature="docComment;method#setAboutDialog#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="docComment;method#setNewDownloadFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="docComment;method#setUI#0;class#DownloadManagerFrame#0" expanded="false" />
                 <element signature="docComment;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="method#mouseClicked#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+                <element signature="method#mousePressed#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SettingFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+              <folding>
+                <element signature="method#SettingFrame#0;class#SettingFrame#0" expanded="false" />
+                <marker date="1526680244914" expanded="true" signature="1595:1714" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewDownloadFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/NewDownloadFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="284" column="13" lean-forward="true" selection-start-line="280" selection-start-column="12" selection-end-line="284" selection-end-column="13" />
+              <folding>
+                <element signature="method#setFileChooserBT#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -74,6 +110,7 @@
     <findStrings>
       <find>remove</find>
       <find>new</find>
+      <find>filec</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -87,20 +124,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DownloadInfo.java" />
-        <option value="$PROJECT_DIR$/src/Download.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/DownloadQueue.java" />
         <option value="$PROJECT_DIR$/src/NewDownload.java" />
         <option value="$PROJECT_DIR$/src/DownloadManager.java" />
         <option value="$PROJECT_DIR$/src/About.java" />
         <option value="$PROJECT_DIR$/src/Setting.java" />
-        <option value="$PROJECT_DIR$/src/CompletedDownloads.java" />
-        <option value="$PROJECT_DIR$/src/SettingFrame.java" />
         <option value="$PROJECT_DIR$/src/AboutFrame.java" />
-        <option value="$PROJECT_DIR$/src/DownloadManagerFrame.java" />
         <option value="$PROJECT_DIR$/src/AboutDialog.java" />
         <option value="$PROJECT_DIR$/src/NewDownloadFrame.java" />
+        <option value="$PROJECT_DIR$/src/DownloadInfo.java" />
+        <option value="$PROJECT_DIR$/src/Download.java" />
+        <option value="$PROJECT_DIR$/src/CompletedDownloads.java" />
+        <option value="$PROJECT_DIR$/src/DownloadQueue.java" />
+        <option value="$PROJECT_DIR$/src/SettingFrame.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/DownloadManagerFrame.java" />
       </list>
     </option>
   </component>
@@ -110,8 +147,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="869" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="683" />
+    <option name="width" value="683" />
     <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -292,31 +330,31 @@
       <workItem from="1526233420937" duration="5594000" />
       <workItem from="1526307571653" duration="15243000" />
       <workItem from="1526459969805" duration="31320000" />
-      <workItem from="1526630206043" duration="19005000" />
+      <workItem from="1526630206043" duration="43182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79457000" />
+    <option name="totallyTimeSpent" value="103634000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="869" height="738" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27925116" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2944" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27925116" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28018758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1749634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -324,7 +362,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3978159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -341,7 +379,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -360,6 +398,8 @@
           <caret line="296" column="63" lean-forward="true" selection-start-line="292" selection-start-column="8" selection-end-line="296" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2848#2849#0" expanded="true" />
             <element signature="docComment;method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setLeftSide#0;class#DownloadManagerFrame#0" expanded="false" />
@@ -367,12 +407,24 @@
             <element signature="docComment;method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setDownloadLists#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
-            <element signature="e#17155#17156#0" expanded="true" />
-            <element signature="e#17215#17216#0" expanded="true" />
+            <element signature="docComment;method#setSettingFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="e#20613#20614#0" expanded="true" />
+            <element signature="e#20662#20663#0" expanded="true" />
+            <element signature="docComment;method#setAboutDialog#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setNewDownloadFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setUI#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mousePressed#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -382,7 +434,7 @@
         <state relative-caret-position="187">
           <caret line="13" column="55" lean-forward="false" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -392,7 +444,7 @@
         <state relative-caret-position="374">
           <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -402,10 +454,8 @@
         <state relative-caret-position="374">
           <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setHTTP#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" expanded="false" />
             <element signature="method#setFileChooserBT#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -432,6 +482,8 @@
           <caret line="126" column="37" lean-forward="true" selection-start-line="126" selection-start-column="37" selection-end-line="126" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2848#2849#0" expanded="true" />
             <element signature="docComment;method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setLeftSide#0;class#DownloadManagerFrame#0" expanded="false" />
@@ -439,12 +491,24 @@
             <element signature="docComment;method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setDownloadLists#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
-            <element signature="e#17155#17156#0" expanded="true" />
-            <element signature="e#17215#17216#0" expanded="true" />
+            <element signature="docComment;method#setSettingFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="e#20613#20614#0" expanded="true" />
+            <element signature="e#20662#20663#0" expanded="true" />
+            <element signature="docComment;method#setAboutDialog#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setNewDownloadFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setUI#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mousePressed#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -471,6 +535,8 @@
           <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2848#2849#0" expanded="true" />
             <element signature="docComment;method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setLeftSide#0;class#DownloadManagerFrame#0" expanded="false" />
@@ -478,12 +544,24 @@
             <element signature="docComment;method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setDownloadLists#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
-            <element signature="e#17155#17156#0" expanded="true" />
-            <element signature="e#17215#17216#0" expanded="true" />
+            <element signature="docComment;method#setSettingFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="e#20613#20614#0" expanded="true" />
+            <element signature="e#20662#20663#0" expanded="true" />
+            <element signature="docComment;method#setAboutDialog#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setNewDownloadFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setUI#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mousePressed#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -502,6 +580,8 @@
           <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2848#2849#0" expanded="true" />
             <element signature="docComment;method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setLeftSide#0;class#DownloadManagerFrame#0" expanded="false" />
@@ -509,12 +589,24 @@
             <element signature="docComment;method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setDownloadLists#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
-            <element signature="e#17155#17156#0" expanded="true" />
-            <element signature="e#17215#17216#0" expanded="true" />
+            <element signature="docComment;method#setSettingFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="e#20613#20614#0" expanded="true" />
+            <element signature="e#20662#20663#0" expanded="true" />
+            <element signature="docComment;method#setAboutDialog#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setNewDownloadFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setUI#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mousePressed#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -524,7 +616,7 @@
         <state relative-caret-position="102">
           <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -534,8 +626,8 @@
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#137#138#0" expanded="false" />
-            <element signature="e#186#187#0" expanded="false" />
+            <element signature="e#193#194#0" expanded="false" />
+            <element signature="e#346#347#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -553,10 +645,8 @@
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setHTTP#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" expanded="false" />
             <element signature="method#setFileChooserBT#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -566,7 +656,7 @@
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -576,7 +666,7 @@
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -612,14 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Download.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/Frame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -632,25 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="232" column="9" lean-forward="false" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DownloadQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding>
-            <element signature="e#137#138#0" expanded="false" />
-            <element signature="e#186#187#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -677,32 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DownloadInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/event/MouseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="78" column="42" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompletedDownloads.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -733,45 +770,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SettingFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/AboutDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-338">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="-153">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AboutDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/DownloadInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="76" selection-end-column="5" />
+        <state relative-caret-position="68">
+          <caret line="25" column="97" lean-forward="false" selection-start-line="25" selection-start-column="97" selection-end-line="25" selection-end-column="97" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DownloadQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompletedDownloads.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Download.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1289">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/event/MouseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="78" column="28" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NewDownloadFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="309" column="8" lean-forward="false" selection-start-line="309" selection-start-column="8" selection-end-line="309" selection-end-column="8" />
+        <state relative-caret-position="229">
+          <caret line="284" column="13" lean-forward="true" selection-start-line="280" selection-start-column="12" selection-end-line="284" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setHTTP#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" expanded="false" />
             <element signature="method#setFileChooserBT#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SettingFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="method#SettingFrame#0;class#SettingFrame#0" expanded="false" />
+            <marker date="1526680244914" expanded="true" signature="1595:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DownloadManagerFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="478" column="13" lean-forward="true" selection-start-line="478" selection-start-column="13" selection-end-line="478" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2848#2849#0" expanded="true" />
             <element signature="docComment;method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setMenuBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setLeftSide#0;class#DownloadManagerFrame#0" expanded="false" />
@@ -779,12 +881,24 @@
             <element signature="docComment;method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#setRightSide#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#setToolBar#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#setDownloadLists#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callCompleteDownloads#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#callDownloadQueue#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="method#showFrame#0;class#DownloadManagerFrame#0" expanded="false" />
-            <element signature="e#17155#17156#0" expanded="true" />
-            <element signature="e#17215#17216#0" expanded="true" />
+            <element signature="docComment;method#setSettingFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="e#20613#20614#0" expanded="true" />
+            <element signature="e#20662#20663#0" expanded="true" />
+            <element signature="docComment;method#setAboutDialog#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setNewDownloadFrame#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="docComment;method#setUI#0;class#DownloadManagerFrame#0" expanded="false" />
             <element signature="docComment;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
+            <element signature="method#mousePressed#0;class#JDMMouseHandler#0;class#DownloadManagerFrame#0" expanded="false" />
           </folding>
         </state>
       </provider>

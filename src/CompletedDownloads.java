@@ -12,4 +12,12 @@ public class CompletedDownloads extends JPanel
         setBorder(BorderFactory.createLineBorder(Color.BLACK));
         completedDownloads = new ArrayList<>();
     }
+
+    public void showDownloads()
+    {
+        for (Download x : completedDownloads)
+        {
+            add(x);
+        }
+    }
 }

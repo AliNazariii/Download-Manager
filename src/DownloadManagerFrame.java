@@ -11,6 +11,12 @@ public class DownloadManagerFrame extends JFrame
 
     private JMenu helpMenu;
     private JMenuItem aboutMenuItem;
+    private JMenu lookAndFeel;
+    private JMenuItem metalLF;
+    private JMenuItem nimbusLF;
+    private JMenuItem CdeLF;
+    private JMenuItem windowsLF;
+    private JMenuItem windowsClassicLF;
     private JMenu downloadMenu;
     private JMenuItem newDownloadMenuItem;
     private JMenuItem pauseMenuItem;
@@ -54,13 +60,8 @@ public class DownloadManagerFrame extends JFrame
 
 
     private SettingFrame settingFrame;
-
     private AboutDialog aboutDialog;
-
     private NewDownloadFrame newDownloadFrame;
-
-
-
 
 
     public DownloadManagerFrame(String name)
@@ -69,22 +70,47 @@ public class DownloadManagerFrame extends JFrame
         //this is the size of the Main Frame
         setSize(800, 600);
         //if the client click on the exit, the program will go to the system tray
-        setDefaultCloseOperation(DownloadManagerFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(DownloadManagerFrame.EXIT_ON_CLOSE);
         //put the main frame to the center of the screen
         setLocationRelativeTo(null);
         //set the Layout Manager
         getContentPane().setLayout(new BorderLayout());
 
-
-
         setMenuBar();
         setLeftSide();
         setRightSide();
+        setDownloadLists();
 
-        completedDownloads = new CompletedDownloads();
-        downloadQueue = new DownloadQueue();
+        SystemTray systemTray = SystemTray.getSystemTray();
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Image image = toolkit.getImage(getClass().getResource("eagleIcon.png"));
+        PopupMenu popupMenu = new PopupMenu();
+        TrayIcon icon = new TrayIcon(image, "JDM", popupMenu);
+        MenuItem openItem = new MenuItem("Open JDM");
+        openItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(true);
+            }
+        });
+        popupMenu.add(openItem);
+
+        MenuItem closeItem = new MenuItem("Close JDM");
+        closeItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SystemTray.getSystemTray().remove(icon);
+                System.exit(0);
+            }
+        });
+        popupMenu.add(closeItem);
+        icon.setImageAutoSize(true);
+        try {
+            systemTray.add(icon);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
     }
-
 
     /**
      * This method will create the MenuBar
@@ -173,13 +199,47 @@ public class DownloadManagerFrame extends JFrame
         aboutMenuItem.addMouseListener(new JDMMouseHandler());
         helpMenu.add(aboutMenuItem);
 
+        lookAndFeel = new JMenu("Look And Feel");
+        lookAndFeel.setMnemonic(KeyEvent.VK_L);
+
+        metalLF = new JMenuItem("Metal", KeyEvent.VK_M);
+        metalLF.setToolTipText("Metal");
+        metalLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, ActionEvent.SHIFT_MASK));
+        metalLF.addMouseListener(new JDMMouseHandler());
+        lookAndFeel.add(metalLF);
+
+        nimbusLF = new JMenuItem("Nimbus", KeyEvent.VK_N);
+        nimbusLF.setToolTipText("Nimbus");
+        nimbusLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.SHIFT_MASK));
+        nimbusLF.addMouseListener(new JDMMouseHandler());
+        lookAndFeel.add(nimbusLF);
+
+        CdeLF = new JMenuItem("CDE/Motif", KeyEvent.VK_D);
+        CdeLF.setToolTipText("CDE/Motif");
+        CdeLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.SHIFT_MASK));
+        CdeLF.addMouseListener(new JDMMouseHandler());
+        lookAndFeel.add(CdeLF);
+
+        windowsLF = new JMenuItem("Windows", KeyEvent.VK_W);
+        windowsLF.setToolTipText("Windows");
+        windowsLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, ActionEvent.SHIFT_MASK));
+        windowsLF.addMouseListener(new JDMMouseHandler());
+        lookAndFeel.add(windowsLF);
+
+        windowsClassicLF = new JMenuItem("Windows Classic", KeyEvent.VK_L);
+        windowsClassicLF.setToolTipText("Windows Classic");
+        windowsClassicLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, ActionEvent.SHIFT_MASK));
+        windowsClassicLF.addMouseListener(new JDMMouseHandler());
+        lookAndFeel.add(windowsClassicLF);
+
+        helpMenu.add(lookAndFeel);
+
         //and here add the help menu to menu bar
         menuBar.add(helpMenu);
 
         //and at last I added the menu bar to the main frame
         setJMenuBar(menuBar);
     }
-
 
     /**
      * This method will make all of things that related to the left black bar
@@ -260,7 +320,6 @@ public class DownloadManagerFrame extends JFrame
         //and at last...Adding the left panel to the main panel
         add(leftSide, BorderLayout.WEST);
     }
-
 
     /**
      * this method will create a panel that placed in the right side of the frame.
@@ -427,8 +486,28 @@ public class DownloadManagerFrame extends JFrame
      */
     public void setDownloadLists()
     {
-        //rightSide.add(completedDownloads, BorderLayout.CENTER);
+        completedDownloads = new CompletedDownloads();
+        downloadQueue = new DownloadQueue();
+    }
 
+    /**
+     * This method will create the completed download list
+     */
+    public void callCompleteDownloads()
+    {
+        rightSide.add(completedDownloads, BorderLayout.CENTER);
+        completedDownloads.showDownloads();
+        showFrame();
+    }
+
+    /**
+     * This method will show the Queue list
+     */
+    public void callDownloadQueue()
+    {
+        rightSide.add(downloadQueue, BorderLayout.CENTER);
+        downloadQueue.showDownloads();
+        showFrame();
     }
 
     /**
@@ -437,23 +516,45 @@ public class DownloadManagerFrame extends JFrame
     public void showFrame()
     {
         //pack();
+        validate();
         repaint();
         setVisible(true);
     }
 
+    /**
+     * This method will create the Setting Frame
+     * contains where to save files
+     * and how many downloads can perform together
+     */
     public void setSettingFrame()
     {
         settingFrame = new SettingFrame();
     }
 
+    /**
+     * This method will create the About Frame
+     * contains author's name, id, date, ...
+     */
     public void setAboutDialog()
     {
         aboutDialog = new AboutDialog(this, "About");
     }
 
+    /**
+     * This method will create the New Download Frame
+     */
     public void setNewDownloadFrame()
     {
         newDownloadFrame = new NewDownloadFrame();
+    }
+
+    /**
+     * This is the main part of changing the Look and Feel
+     * this method is called by the MouseHandler.
+     */
+    public void setUI()
+    {
+        SwingUtilities.updateComponentTreeUI(this);
     }
 
     /**
@@ -462,6 +563,7 @@ public class DownloadManagerFrame extends JFrame
     public class JDMMouseHandler extends MouseAdapter
     {
         @Override
+        //This method usually use for the buttons
         public void mouseClicked(MouseEvent e)
         {
             if (e.getSource().equals(newDownloadButton))
@@ -493,10 +595,12 @@ public class DownloadManagerFrame extends JFrame
             else if (e.getSource().equals(queueButton))
             {
                 System.out.println("queueButton");
+                callDownloadQueue();
             }
             else if (e.getSource().equals(completedButton))
             {
                 System.out.println("completedButton");
+                callCompleteDownloads();
             }
             else if (e.getSource().equals(processingButton))
             {
@@ -507,7 +611,7 @@ public class DownloadManagerFrame extends JFrame
                 System.out.println("Extra Buttons");
             }
         }
-
+        //This method usually use for the menuItems
         public void mousePressed(MouseEvent e)
         {
             if (e.getSource().equals(newDownloadMenuItem))
@@ -539,14 +643,148 @@ public class DownloadManagerFrame extends JFrame
             else if (e.getSource().equals(exitMenuItem))
             {
                 System.out.println("exitMenuItem");
+                System.exit(0);
             }
             else if (e.getSource().equals(aboutMenuItem))
             {
                 System.out.println("aboutMenuItem");
                 setAboutDialog();
             }
-
+            //Listener of the Metal
+            else if (e.getSource().equals(metalLF))
+            {
+                System.out.println("Metal Look&Feel");
+                try
+                {
+                    UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+                    setUI();
+                }
+                catch (ClassNotFoundException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (InstantiationException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (IllegalAccessException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (UnsupportedLookAndFeelException e1)
+                {
+                    e1.printStackTrace();
+                }
+                showFrame();
+            }
+            //Listener of the Nimbus
+            else if (e.getSource().equals(nimbusLF))
+            {
+                System.out.println("Nimbus Motif");
+                try
+                {
+                    UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+                    setUI();
+                }
+                catch (ClassNotFoundException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (InstantiationException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (IllegalAccessException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (UnsupportedLookAndFeelException e1)
+                {
+                    e1.printStackTrace();
+                }
+                showFrame();
+            }
+            //Listener of the Motif
+            else if (e.getSource().equals(CdeLF))
+            {
+                System.out.println("Motif Look&Feel");
+                try
+                {
+                    UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+                    setUI();
+                }
+                catch (ClassNotFoundException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (InstantiationException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (IllegalAccessException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (UnsupportedLookAndFeelException e1)
+                {
+                    e1.printStackTrace();
+                }
+                showFrame();
+            }
+            //Listener of the Windows
+            else if (e.getSource().equals(windowsLF))
+            {
+                System.out.println("Windows Look&Feel");
+                try
+                {
+                    UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+                    setUI();
+                }
+                catch (ClassNotFoundException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (InstantiationException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (IllegalAccessException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (UnsupportedLookAndFeelException e1)
+                {
+                    e1.printStackTrace();
+                }
+                showFrame();
+            }
+            //Listener of the Windows Classic
+            else if (e.getSource().equals(windowsClassicLF))
+            {
+                System.out.println("windows Classic Look&Feel");
+                try
+                {
+                    UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
+                    setUI();
+                }
+                catch (ClassNotFoundException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (InstantiationException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (IllegalAccessException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (UnsupportedLookAndFeelException e1)
+                {
+                    e1.printStackTrace();
+                }
+                showFrame();
+            }
         }
     }
-
 }
