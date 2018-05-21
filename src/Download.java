@@ -22,7 +22,7 @@ public class Download extends JPanel
         super(new BorderLayout());
 
         JPanel eagleGetLogo = new JPanel();
-        ImageIcon eagleIcon = new ImageIcon(getClass().getResource("eagleIcon.png"));
+        ImageIcon eagleIcon = new ImageIcon(getClass().getResource("/Icons/eagleIcon.png"));
         JLabel eagle = new JLabel(eagleIcon);
         eagleGetLogo.add(eagle);
         eagleGetLogo.setOpaque(false);
@@ -47,7 +47,7 @@ public class Download extends JPanel
 
         JPanel buttonPanel = new JPanel(new GridLayout(1, 3));
 
-        Icon pauseIcon = new ImageIcon(getClass().getResource("pauseIcon2.png"));
+        Icon pauseIcon = new ImageIcon(getClass().getResource("/Icons/pauseIcon2.png"));
         pauseButton = new JToggleButton(pauseIcon);
         pauseButton.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
         pauseButton.setContentAreaFilled(false);
@@ -56,7 +56,7 @@ public class Download extends JPanel
         pauseButton.addMouseListener(new DownloadMouseHandler());
         buttonPanel.add(pauseButton);
 
-        Icon openIcon = new ImageIcon(getClass().getResource("openIcon2.png"));
+        Icon openIcon = new ImageIcon(getClass().getResource("/Icons/openIcon2.png"));
         openButton = new JToggleButton(openIcon);
         openButton.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
         openButton.setContentAreaFilled(false);
@@ -65,7 +65,7 @@ public class Download extends JPanel
         openButton.addMouseListener(new DownloadMouseHandler());
         buttonPanel.add(openButton);
 
-        Icon removeIcon = new ImageIcon(getClass().getResource("removeIcon2.png"));
+        Icon removeIcon = new ImageIcon(getClass().getResource("/Icons/removeIcon2.png"));
         removeButton = new JToggleButton(removeIcon);
         removeButton.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
         removeButton.setContentAreaFilled(false);
@@ -87,7 +87,7 @@ public class Download extends JPanel
         add(centerOfPanel, BorderLayout.CENTER);
 
 
-        Icon detailsIcon = new ImageIcon(getClass().getResource("detailsIcon.png"));
+        Icon detailsIcon = new ImageIcon(getClass().getResource("/Icons/detailsIcon.png"));
         detailsButton = new JToggleButton(detailsIcon);
         detailsButton.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
         detailsButton.setContentAreaFilled(false);

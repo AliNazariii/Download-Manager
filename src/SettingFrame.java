@@ -68,7 +68,7 @@ public class SettingFrame extends JFrame
         pathField.setForeground(new Color(89, 89, 89));
         pathPanel.add(pathField, BorderLayout.CENTER);
 
-        Icon fileChooserIcon = new ImageIcon(getClass().getResource("fileChooserIcon.png"));
+        Icon fileChooserIcon = new ImageIcon(getClass().getResource("/Icons/fileChooserIcon.png"));
         fileChooserButton = new JToggleButton(fileChooserIcon);
         fileChooserButton.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
         fileChooserButton.setContentAreaFilled(false);

@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -83,7 +84,7 @@ public class DownloadManagerFrame extends JFrame
 
         SystemTray systemTray = SystemTray.getSystemTray();
         Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Image image = toolkit.getImage(getClass().getResource("eagleIcon.png"));
+        Image image = toolkit.getImage(getClass().getResource("/Icons/eagleIcon.png"));
         PopupMenu popupMenu = new PopupMenu();
         TrayIcon icon = new TrayIcon(image, "JDM", popupMenu);
         MenuItem openItem = new MenuItem("Open JDM");
@@ -273,7 +274,7 @@ public class DownloadManagerFrame extends JFrame
 
         //create the JDM Logo to add to the Frame
         downloadManagerLogo = new JPanel();
-        ImageIcon thisLogo = new ImageIcon(getClass().getResource("logoInFrame.png"));
+        ImageIcon thisLogo = new ImageIcon(getClass().getResource("/Icons/logoInFrame.png"));
         JLabel logo = new JLabel(thisLogo);
         downloadManagerLogo.add(logo);
         //use transparent of the picture not to show the white background under the eagle
@@ -287,21 +288,21 @@ public class DownloadManagerFrame extends JFrame
         leftToolBar.setFloatable(false);
         leftToolBar.setBackground(new Color(50, 54, 63));
 
-        Icon processingIcon = new ImageIcon(getClass().getResource("processingIcon.png"));
+        Icon processingIcon = new ImageIcon(getClass().getResource("/Icons/processingIcon.png"));
         processingButton = new JButton("Processing", processingIcon);
         processingButton.setForeground(new Color(255, 255, 255));
         processingButton.setOpaque(false);
         processingButton.setFocusable(false);
         processingButton.addMouseListener(new JDMMouseHandler());
 
-        Icon completedIcon = new ImageIcon(getClass().getResource("completedIcon.png"));
+        Icon completedIcon = new ImageIcon(getClass().getResource("/Icons/completedIcon.png"));
         completedButton = new JButton("Completed", completedIcon);
         completedButton.setForeground(new Color(255, 255, 255));
         completedButton.setOpaque(false);
         completedButton.setFocusable(false);
         completedButton.addMouseListener(new JDMMouseHandler());
 
-        Icon queueIcon = new ImageIcon(getClass().getResource("queueIcon.png"));
+        Icon queueIcon = new ImageIcon(getClass().getResource("/Icons/queueIcon.png"));
         queueButton = new JButton("Queue", queueIcon);
         queueButton.setForeground(new Color(255, 255, 255));
         queueButton.setOpaque(false);
@@ -324,7 +325,7 @@ public class DownloadManagerFrame extends JFrame
 
         //create the author's panel to add to the left panel
         myLogo = new JPanel();
-        ImageIcon myIcon = new ImageIcon(getClass().getResource("myIcon.png"));
+        ImageIcon myIcon = new ImageIcon(getClass().getResource("/Icons/myIcon.png"));
         JLabel myLabel = new JLabel(myIcon);
         myLogo.add(myLabel);
         //use transparent of the picture not to show the white background under the eagle
@@ -368,7 +369,7 @@ public class DownloadManagerFrame extends JFrame
         toolBar.setBackground(new Color(208, 223, 248));
 
         //create the newDownload button and set the icon and other features
-        Icon newDownloadIcon = new ImageIcon(getClass().getResource("newDownloadIcon.png"));
+        Icon newDownloadIcon = new ImageIcon(getClass().getResource("/Icons/newDownloadIcon.png"));
         newDownloadButton = new JButton(newDownloadIcon);
         newDownloadButton.setToolTipText("New Download");
         newDownloadButton.setOpaque(false);
@@ -376,7 +377,7 @@ public class DownloadManagerFrame extends JFrame
         newDownloadButton.addMouseListener(new JDMMouseHandler());
 
         //create the pause button and set the icon and other features
-        Icon pauseIcon = new ImageIcon(getClass().getResource("pauseIcon.png"));
+        Icon pauseIcon = new ImageIcon(getClass().getResource("/Icons/pauseIcon.png"));
         pauseButton = new JButton(pauseIcon);
         pauseButton.setToolTipText("Pause");
         pauseButton.setOpaque(false);
@@ -384,7 +385,7 @@ public class DownloadManagerFrame extends JFrame
         pauseButton.addMouseListener(new JDMMouseHandler());
 
         //create the resume button and set the icon and other features
-        Icon resumeIcon = new ImageIcon(getClass().getResource("resumeIcon.png"));
+        Icon resumeIcon = new ImageIcon(getClass().getResource("/Icons/resumeIcon.png"));
         resumeButton = new JButton(resumeIcon);
         resumeButton.setToolTipText("Resume");
         resumeButton.setOpaque(false);
@@ -392,7 +393,7 @@ public class DownloadManagerFrame extends JFrame
         resumeButton.addMouseListener(new JDMMouseHandler());
 
         //create the cancel button and set the icon and other features
-        Icon cancelIcon = new ImageIcon(getClass().getResource("cancelIcon.png"));
+        Icon cancelIcon = new ImageIcon(getClass().getResource("/Icons/cancelIcon.png"));
         cancelButton = new JButton(cancelIcon);
         cancelButton.setToolTipText("Cancel");
         cancelButton.setOpaque(false);
@@ -400,7 +401,7 @@ public class DownloadManagerFrame extends JFrame
         cancelButton.addMouseListener(new JDMMouseHandler());
 
         //create the sort button and set the icon and other features
-        Icon sortIcon = new ImageIcon(getClass().getResource("sortIcon.png"));
+        Icon sortIcon = new ImageIcon(getClass().getResource("/Icons/sortIcon.png"));
         sortButton = new JButton(sortIcon);
         sortButton.setToolTipText("Sort");
         sortButton.setOpaque(false);
@@ -408,7 +409,7 @@ public class DownloadManagerFrame extends JFrame
         sortButton.addMouseListener(new JDMMouseHandler());
 
         //create the delete button and set the icon and other features
-        Icon deleteIcon = new ImageIcon(getClass().getResource("deleteIcon.png"));
+        Icon deleteIcon = new ImageIcon(getClass().getResource("/Icons/deleteIcon.png"));
         deleteButton = new JButton(deleteIcon);
         deleteButton.setToolTipText("Delete Download");
         deleteButton.setOpaque(false);
@@ -416,7 +417,7 @@ public class DownloadManagerFrame extends JFrame
         deleteButton.addMouseListener(new JDMMouseHandler());
 
         //create the videoSniffer button and set the icon and other features
-        Icon videoSnifferIcon = new ImageIcon(getClass().getResource("videoSnifferIcon.png"));
+        Icon videoSnifferIcon = new ImageIcon(getClass().getResource("/Icons/videoSnifferIcon.png"));
         videoSnifferButton = new JButton(videoSnifferIcon);
         videoSnifferButton.setOpaque(false);
         videoSnifferButton.setToolTipText("Video Sniffer");
@@ -424,7 +425,7 @@ public class DownloadManagerFrame extends JFrame
         videoSnifferButton.addMouseListener(new JDMMouseHandler());
 
         //create the mediaGrabber button and set the icon and other features
-        Icon mediaGrabberIcon = new ImageIcon(getClass().getResource("mediaGrabberIcon.png"));
+        Icon mediaGrabberIcon = new ImageIcon(getClass().getResource("/Icons/mediaGrabberIcon.png"));
         mediaGrabberButton = new JButton(mediaGrabberIcon);
         mediaGrabberButton.setOpaque(false);
         mediaGrabberButton.setToolTipText("Media Grabber");
@@ -432,7 +433,7 @@ public class DownloadManagerFrame extends JFrame
         mediaGrabberButton.addMouseListener(new JDMMouseHandler());
 
         //create the batchDownload button and set the icon and other features
-        Icon batchDownloadIcon = new ImageIcon(getClass().getResource("batchDownloadIcon.png"));
+        Icon batchDownloadIcon = new ImageIcon(getClass().getResource("/Icons/batchDownloadIcon.png"));
         batchDownloadButton = new JButton(batchDownloadIcon);
         batchDownloadButton.setOpaque(false);
         batchDownloadButton.setToolTipText("Batch Download");
@@ -440,7 +441,7 @@ public class DownloadManagerFrame extends JFrame
         batchDownloadButton.addMouseListener(new JDMMouseHandler());
 
         //create the setting button and set the icon and other features
-        Icon settingIcon = new ImageIcon(getClass().getResource("settingIcon.png"));
+        Icon settingIcon = new ImageIcon(getClass().getResource("/Icons/settingIcon.png"));
         settingButton = new JButton(settingIcon);
         settingButton.setToolTipText("Setting");
         settingButton.setOpaque(false);
