@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38a204c7-e8ac-4cb7-8700-d0d39cc69f99" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame$1.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame$2.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame$JDMMouseHandler.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame$JDMMouseHandler.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/DownloadManagerFrame.class" />
-      <change beforePath="$PROJECT_DIR$/src/Download.java" afterPath="$PROJECT_DIR$/src/Download.java" />
-      <change beforePath="$PROJECT_DIR$/src/DownloadManagerFrame.java" afterPath="$PROJECT_DIR$/src/DownloadManagerFrame.java" />
       <change beforePath="$PROJECT_DIR$/src/NewDownloadFrame.java" afterPath="$PROJECT_DIR$/src/NewDownloadFrame.java" />
-      <change beforePath="$PROJECT_DIR$/src/SettingFrame.java" afterPath="$PROJECT_DIR$/src/SettingFrame.java" />
-      <change beforePath="$PROJECT_DIR$/src/batchDownloadIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/cancelIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/completedIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/deleteIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/detailsIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/eagleIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/fileChooserIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/logoInFrame.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/mediaGrabberIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/myIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/nameIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/newDownloadIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/openIcon2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pauseIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pauseIcon2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/processingIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/queueIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/removeIcon2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/resumeIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/settingIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sortIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/urlIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/videoSnifferIcon.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Download_Manager_GitLab$Run_Main.coverage" NAME="Run_Main Coverage Results" MODIFIED="1526927623457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Download_Manager_GitLab$Run_Main.coverage" NAME="Run_Main Coverage Results" MODIFIED="1526933939885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -83,15 +52,26 @@
       <file leaf-file-name="NewDownloadFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NewDownloadFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="442">
+              <caret line="84" column="36" lean-forward="true" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
               <folding>
+                <element signature="method#NewDownloadFrame#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="method#setComponents#0;class#NewDownloadFrame#0" expanded="false" />
                 <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" expanded="false" />
                 <element signature="docComment;class#NewDownloadMouseHandler#0;class#NewDownloadFrame#0" expanded="false" />
                 <element signature="class#NewDownloadMouseHandler#0;class#NewDownloadFrame#0" expanded="false" />
-                <element signature="method#mouseClicked#0;class#NewDownloadMouseHandler#0;class#NewDownloadFrame#0" expanded="false" />
                 <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AboutDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="57" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -335,12 +315,12 @@
       <workItem from="1526630206043" duration="43182000" />
       <workItem from="1526763100488" duration="2269000" />
       <workItem from="1526815054372" duration="6938000" />
-      <workItem from="1526926028540" duration="3948000" />
+      <workItem from="1526926028540" duration="7537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116789000" />
+    <option name="totallyTimeSpent" value="120378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -355,7 +335,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27925116" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27925116" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27925116" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -859,14 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AboutDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DownloadQueue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -953,15 +925,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AboutDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/NewDownloadFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="442">
+          <caret line="84" column="36" lean-forward="true" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
           <folding>
+            <element signature="method#NewDownloadFrame#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#setComponents#0;class#NewDownloadFrame#0" expanded="false" />
             <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" expanded="false" />
             <element signature="docComment;class#NewDownloadMouseHandler#0;class#NewDownloadFrame#0" expanded="false" />
             <element signature="class#NewDownloadMouseHandler#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#NewDownloadMouseHandler#0;class#NewDownloadFrame#0" expanded="false" />
             <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
           </folding>
         </state>
