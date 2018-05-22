@@ -28,8 +28,8 @@ public class DownloadManagerFrame extends JFrame
     private JMenuItem exitMenuItem;
 
 
-    private CompletedDownloads completedDownloads;
-    private DownloadQueue downloadQueue;
+    public static CompletedDownloads completedDownloads;
+    public static DownloadQueue downloadQueue;
 
 
     private JPanel rightSide;
@@ -41,9 +41,6 @@ public class DownloadManagerFrame extends JFrame
     private JButton cancelButton;
     private JButton sortButton;
     private JButton deleteButton;
-    private JButton videoSnifferButton;
-    private JButton mediaGrabberButton;
-    private JButton batchDownloadButton;
     private JButton settingButton;
     private JTextField filterFilesTextField;
 
@@ -137,8 +134,7 @@ public class DownloadManagerFrame extends JFrame
         newDownloadMenuItem.setToolTipText("New Download");
         KeyStroke newDownloadMenu = KeyStroke.getKeyStroke("control N");
         newDownloadMenuItem.setAccelerator(newDownloadMenu);
-        newDownloadMenuItem.addActionListener(e -> setNewDownloadFrame());
-        newDownloadMenuItem.addMouseListener(new JDMMouseHandler());
+        newDownloadMenuItem.addActionListener(new JDMActionListener());
         downloadMenu.add(newDownloadMenuItem);
 
         downloadMenu.add(new JSeparator());
@@ -147,24 +143,21 @@ public class DownloadManagerFrame extends JFrame
         resumeMenuItem.setToolTipText("Resume");
         KeyStroke resumeMenu = KeyStroke.getKeyStroke("control R");
         resumeMenuItem.setAccelerator(resumeMenu);
-        resumeMenuItem.addActionListener(e -> System.out.println("Resume"));
-        resumeMenuItem.addMouseListener(new JDMMouseHandler());
+        resumeMenuItem.addActionListener(new JDMActionListener());
         downloadMenu.add(resumeMenuItem);
 
         pauseMenuItem = new JMenuItem("Pause", KeyEvent.VK_P);
         pauseMenuItem.setToolTipText("Pause");
         KeyStroke pauseMenu = KeyStroke.getKeyStroke("control P");
         pauseMenuItem.setAccelerator(pauseMenu);
-        pauseMenuItem.addActionListener(e -> System.out.println("Pause"));
-        pauseMenuItem.addMouseListener(new JDMMouseHandler());
+        pauseMenuItem.addActionListener(new JDMActionListener());
         downloadMenu.add(pauseMenuItem);
 
         cancelMenuItem = new JMenuItem("Cancel", KeyEvent.VK_C);
         cancelMenuItem.setToolTipText("Cancel");
         KeyStroke cancelMenu = KeyStroke.getKeyStroke("alt C");
         cancelMenuItem.setAccelerator(cancelMenu);
-        cancelMenuItem.addActionListener(e -> System.out.println("Cancel"));
-        cancelMenuItem.addMouseListener(new JDMMouseHandler());
+        cancelMenuItem.addActionListener(new JDMActionListener());
         downloadMenu.add(cancelMenuItem);
 
         downloadMenu.add(new JSeparator());
@@ -173,8 +166,7 @@ public class DownloadManagerFrame extends JFrame
         deleteMenuItem.setToolTipText("Delete");
         KeyStroke deleteMenu = KeyStroke.getKeyStroke("control D");
         deleteMenuItem.setAccelerator(deleteMenu);
-        deleteMenuItem.addActionListener(e -> System.out.println("Delete"));
-        deleteMenuItem.addMouseListener(new JDMMouseHandler());
+        deleteMenuItem.addActionListener(new JDMActionListener());
         downloadMenu.add(deleteMenuItem);
 
         downloadMenu.add(new JSeparator());
@@ -183,8 +175,7 @@ public class DownloadManagerFrame extends JFrame
         settingMenuItem.setToolTipText("Settings");
         KeyStroke settingMenu = KeyStroke.getKeyStroke("alt S");
         settingMenuItem.setAccelerator(settingMenu);
-        settingMenuItem.addActionListener(e -> setSettingFrame());
-        settingMenuItem.addMouseListener(new JDMMouseHandler());
+        settingMenuItem.addActionListener(new JDMActionListener());
         downloadMenu.add(settingMenuItem);
 
         downloadMenu.add(new JSeparator());
@@ -193,8 +184,7 @@ public class DownloadManagerFrame extends JFrame
         exitMenuItem.setToolTipText("Exit");
         KeyStroke exitMenu = KeyStroke.getKeyStroke("alt E");
         exitMenuItem.setAccelerator(exitMenu);
-        exitMenuItem.addActionListener(e -> System.exit(0));
-        exitMenuItem.addMouseListener(new JDMMouseHandler());
+        exitMenuItem.addActionListener(new JDMActionListener());
         downloadMenu.add(exitMenuItem);
 
         //here I add the download menu to the menu bar
@@ -212,8 +202,7 @@ public class DownloadManagerFrame extends JFrame
         aboutMenuItem.setToolTipText("About");
         KeyStroke aboutMenu = KeyStroke.getKeyStroke("alt A");
         aboutMenuItem.setAccelerator(aboutMenu);
-        aboutMenuItem.addActionListener(e -> setAboutDialog());
-        aboutMenuItem.addMouseListener(new JDMMouseHandler());
+        aboutMenuItem.addActionListener(new JDMActionListener());
         helpMenu.add(aboutMenuItem);
 
         lookAndFeel = new JMenu("Look And Feel");
@@ -222,31 +211,31 @@ public class DownloadManagerFrame extends JFrame
         metalLF = new JMenuItem("Metal", KeyEvent.VK_M);
         metalLF.setToolTipText("Metal");
         metalLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, ActionEvent.SHIFT_MASK));
-        metalLF.addMouseListener(new JDMMouseHandler());
+        metalLF.addActionListener(new JDMActionListener());
         lookAndFeel.add(metalLF);
 
         nimbusLF = new JMenuItem("Nimbus", KeyEvent.VK_N);
         nimbusLF.setToolTipText("Nimbus");
         nimbusLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.SHIFT_MASK));
-        nimbusLF.addMouseListener(new JDMMouseHandler());
+        nimbusLF.addActionListener(new JDMActionListener());
         lookAndFeel.add(nimbusLF);
 
         CdeLF = new JMenuItem("CDE/Motif", KeyEvent.VK_D);
         CdeLF.setToolTipText("CDE/Motif");
         CdeLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.SHIFT_MASK));
-        CdeLF.addMouseListener(new JDMMouseHandler());
+        CdeLF.addActionListener(new JDMActionListener());
         lookAndFeel.add(CdeLF);
 
         windowsLF = new JMenuItem("Windows", KeyEvent.VK_W);
         windowsLF.setToolTipText("Windows");
         windowsLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, ActionEvent.SHIFT_MASK));
-        windowsLF.addMouseListener(new JDMMouseHandler());
+        windowsLF.addActionListener(new JDMActionListener());
         lookAndFeel.add(windowsLF);
 
         windowsClassicLF = new JMenuItem("Windows Classic", KeyEvent.VK_L);
         windowsClassicLF.setToolTipText("Windows Classic");
         windowsClassicLF.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, ActionEvent.SHIFT_MASK));
-        windowsClassicLF.addMouseListener(new JDMMouseHandler());
+        windowsClassicLF.addActionListener(new JDMActionListener());
         lookAndFeel.add(windowsClassicLF);
 
         helpMenu.add(lookAndFeel);
@@ -293,21 +282,21 @@ public class DownloadManagerFrame extends JFrame
         processingButton.setForeground(new Color(255, 255, 255));
         processingButton.setOpaque(false);
         processingButton.setFocusable(false);
-        processingButton.addMouseListener(new JDMMouseHandler());
+        processingButton.addActionListener(new JDMActionListener());
 
         Icon completedIcon = new ImageIcon(getClass().getResource("/Icons/completedIcon.png"));
         completedButton = new JButton("Completed", completedIcon);
         completedButton.setForeground(new Color(255, 255, 255));
         completedButton.setOpaque(false);
         completedButton.setFocusable(false);
-        completedButton.addMouseListener(new JDMMouseHandler());
+        completedButton.addActionListener(new JDMActionListener());
 
         Icon queueIcon = new ImageIcon(getClass().getResource("/Icons/queueIcon.png"));
         queueButton = new JButton("Queue", queueIcon);
         queueButton.setForeground(new Color(255, 255, 255));
         queueButton.setOpaque(false);
         queueButton.setFocusable(false);
-        queueButton.addMouseListener(new JDMMouseHandler());
+        queueButton.addActionListener(new JDMActionListener());
 
         leftToolBar.add(Box.createRigidArea(new Dimension(0,20)));
         leftToolBar.add(new JSeparator(SwingConstants.HORIZONTAL));
@@ -374,7 +363,7 @@ public class DownloadManagerFrame extends JFrame
         newDownloadButton.setToolTipText("New Download");
         newDownloadButton.setOpaque(false);
         newDownloadButton.setFocusable(false);
-        newDownloadButton.addMouseListener(new JDMMouseHandler());
+        newDownloadButton.addActionListener(new JDMActionListener());
 
         //create the pause button and set the icon and other features
         Icon pauseIcon = new ImageIcon(getClass().getResource("/Icons/pauseIcon.png"));
@@ -382,7 +371,7 @@ public class DownloadManagerFrame extends JFrame
         pauseButton.setToolTipText("Pause");
         pauseButton.setOpaque(false);
         pauseButton.setFocusable(false);
-        pauseButton.addMouseListener(new JDMMouseHandler());
+        pauseButton.addActionListener(new JDMActionListener());
 
         //create the resume button and set the icon and other features
         Icon resumeIcon = new ImageIcon(getClass().getResource("/Icons/resumeIcon.png"));
@@ -390,7 +379,7 @@ public class DownloadManagerFrame extends JFrame
         resumeButton.setToolTipText("Resume");
         resumeButton.setOpaque(false);
         resumeButton.setFocusable(false);
-        resumeButton.addMouseListener(new JDMMouseHandler());
+        resumeButton.addActionListener(new JDMActionListener());
 
         //create the cancel button and set the icon and other features
         Icon cancelIcon = new ImageIcon(getClass().getResource("/Icons/cancelIcon.png"));
@@ -398,7 +387,7 @@ public class DownloadManagerFrame extends JFrame
         cancelButton.setToolTipText("Cancel");
         cancelButton.setOpaque(false);
         cancelButton.setFocusable(false);
-        cancelButton.addMouseListener(new JDMMouseHandler());
+        cancelButton.addActionListener(new JDMActionListener());
 
         //create the sort button and set the icon and other features
         Icon sortIcon = new ImageIcon(getClass().getResource("/Icons/sortIcon.png"));
@@ -406,7 +395,7 @@ public class DownloadManagerFrame extends JFrame
         sortButton.setToolTipText("Sort");
         sortButton.setOpaque(false);
         sortButton.setFocusable(false);
-        sortButton.addMouseListener(new JDMMouseHandler());
+        sortButton.addActionListener(new JDMActionListener());
 
         //create the delete button and set the icon and other features
         Icon deleteIcon = new ImageIcon(getClass().getResource("/Icons/deleteIcon.png"));
@@ -414,31 +403,7 @@ public class DownloadManagerFrame extends JFrame
         deleteButton.setToolTipText("Delete Download");
         deleteButton.setOpaque(false);
         deleteButton.setFocusable(false);
-        deleteButton.addMouseListener(new JDMMouseHandler());
-
-        //create the videoSniffer button and set the icon and other features
-        Icon videoSnifferIcon = new ImageIcon(getClass().getResource("/Icons/videoSnifferIcon.png"));
-        videoSnifferButton = new JButton(videoSnifferIcon);
-        videoSnifferButton.setOpaque(false);
-        videoSnifferButton.setToolTipText("Video Sniffer");
-        videoSnifferButton.setFocusable(false);
-        videoSnifferButton.addMouseListener(new JDMMouseHandler());
-
-        //create the mediaGrabber button and set the icon and other features
-        Icon mediaGrabberIcon = new ImageIcon(getClass().getResource("/Icons/mediaGrabberIcon.png"));
-        mediaGrabberButton = new JButton(mediaGrabberIcon);
-        mediaGrabberButton.setOpaque(false);
-        mediaGrabberButton.setToolTipText("Media Grabber");
-        mediaGrabberButton.setFocusable(false);
-        mediaGrabberButton.addMouseListener(new JDMMouseHandler());
-
-        //create the batchDownload button and set the icon and other features
-        Icon batchDownloadIcon = new ImageIcon(getClass().getResource("/Icons/batchDownloadIcon.png"));
-        batchDownloadButton = new JButton(batchDownloadIcon);
-        batchDownloadButton.setOpaque(false);
-        batchDownloadButton.setToolTipText("Batch Download");
-        batchDownloadButton.setFocusable(false);
-        batchDownloadButton.addMouseListener(new JDMMouseHandler());
+        deleteButton.addActionListener(new JDMActionListener());
 
         //create the setting button and set the icon and other features
         Icon settingIcon = new ImageIcon(getClass().getResource("/Icons/settingIcon.png"));
@@ -446,13 +411,13 @@ public class DownloadManagerFrame extends JFrame
         settingButton.setToolTipText("Setting");
         settingButton.setOpaque(false);
         settingButton.setFocusable(false);
-        settingButton.addMouseListener(new JDMMouseHandler());
+        settingButton.addActionListener(new JDMActionListener());
 
         //textfield for filtering files by searching words and other features
         filterFilesTextField = new JTextField("Filter files...");
         filterFilesTextField.setForeground(new Color(166, 166, 166));
         filterFilesTextField.setOpaque(false);
-        filterFilesTextField.addMouseListener(new JDMMouseHandler());
+        filterFilesTextField.addActionListener(new JDMActionListener());
 
         //add the buttons to their tool bar and set the spaces and separators
         toolBar.add(Box.createRigidArea(new Dimension(20,0)));
@@ -486,18 +451,7 @@ public class DownloadManagerFrame extends JFrame
         toolBar.add(new JSeparator(SwingConstants.VERTICAL));
 
         toolBar.add(Box.createRigidArea(new Dimension(10,0)));
-        toolBar.add(videoSnifferButton);
 
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
-        toolBar.add(mediaGrabberButton);
-
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
-        toolBar.add(batchDownloadButton);
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
-
-        toolBar.add(new JSeparator(SwingConstants.VERTICAL));
-
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
         toolBar.add(settingButton);
 
         toolBar.add(Box.createRigidArea(new Dimension(30,0)));
@@ -585,14 +539,14 @@ public class DownloadManagerFrame extends JFrame
     }
 
     /**
-     * I handle the actions that happen with Mouse here
+     * I handle the actions here
      */
-    public class JDMMouseHandler extends MouseAdapter
-    {
+    public class JDMActionListener implements ActionListener {
+
         @Override
-        //This method usually use for the buttons
-        public void mouseClicked(MouseEvent e)
+        public void actionPerformed(ActionEvent e)
         {
+            //toolbar buttons
             if (e.getSource().equals(newDownloadButton))
             {
                 System.out.println("newDownloadButton");
@@ -619,6 +573,13 @@ public class DownloadManagerFrame extends JFrame
                 System.out.println("settingButton");
                 setSettingFrame();
             }
+            else if (e.getSource().equals(filterFilesTextField))
+            {
+                System.out.println(filterFilesTextField.getText());
+            }
+
+
+            //left toolbar buttons
             else if (e.getSource().equals(queueButton))
             {
                 System.out.println("queueButton");
@@ -633,15 +594,11 @@ public class DownloadManagerFrame extends JFrame
             {
                 System.out.println("processingButton");
             }
-            else
-            {
-                System.out.println("Extra Buttons");
-            }
-        }
-        //This method usually use for the menuItems
-        public void mousePressed(MouseEvent e)
-        {
-            if (e.getSource().equals(newDownloadMenuItem))
+
+
+
+            //for the menuItems
+            else if (e.getSource().equals(newDownloadMenuItem))
             {
                 System.out.println("newDownloadMenuItem");
                 setNewDownloadFrame();
@@ -677,6 +634,8 @@ public class DownloadManagerFrame extends JFrame
                 System.out.println("aboutMenuItem");
                 setAboutDialog();
             }
+
+
             //Listener of the Metal
             else if (e.getSource().equals(metalLF))
             {
@@ -811,6 +770,10 @@ public class DownloadManagerFrame extends JFrame
                     e1.printStackTrace();
                 }
                 showFrame();
+            }
+            else
+            {
+                System.out.println("Extra Buttons");
             }
         }
     }

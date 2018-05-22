@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -17,7 +19,7 @@ public class Download extends JPanel
     private JLabel sizeOfFile;
     private JLabel speedDownload;
 
-    public Download(String nameOfFile, String sizeOfFile, String speedDownload)
+    public Download(String nameOfFile)
     {
         super(new BorderLayout());
 
@@ -39,6 +41,7 @@ public class Download extends JPanel
         progressBar.setSize(550, 20);
         progressBar.setValue(40);
         progressBar.setStringPainted(true);
+        progressBar.setForeground(Color.decode("#0DD98A"));
         centerOfPanel.add(progressBar, BorderLayout.CENTER);
 
 
@@ -53,7 +56,7 @@ public class Download extends JPanel
         pauseButton.setContentAreaFilled(false);
         pauseButton.setOpaque(false);
         pauseButton.setFocusable(false);
-        pauseButton.addMouseListener(new DownloadMouseHandler());
+        pauseButton.addActionListener(new DownloadActionListener());
         buttonPanel.add(pauseButton);
 
         Icon openIcon = new ImageIcon(getClass().getResource("/Icons/openIcon2.png"));
@@ -62,7 +65,7 @@ public class Download extends JPanel
         openButton.setContentAreaFilled(false);
         openButton.setOpaque(false);
         openButton.setFocusable(false);
-        openButton.addMouseListener(new DownloadMouseHandler());
+        openButton.addActionListener(new DownloadActionListener());
         buttonPanel.add(openButton);
 
         Icon removeIcon = new ImageIcon(getClass().getResource("/Icons/removeIcon2.png"));
@@ -71,16 +74,10 @@ public class Download extends JPanel
         removeButton.setContentAreaFilled(false);
         removeButton.setOpaque(false);
         removeButton.setFocusable(false);
-        removeButton.addMouseListener(new DownloadMouseHandler());
+        removeButton.addActionListener(new DownloadActionListener());
         buttonPanel.add(removeButton);
 
         southPanel.add(buttonPanel, BorderLayout.WEST);
-
-        this.sizeOfFile = new JLabel(sizeOfFile);
-        southPanel.add(this.sizeOfFile, BorderLayout.CENTER);
-
-        this.speedDownload = new JLabel(speedDownload);
-        southPanel.add(this.speedDownload, BorderLayout.EAST);
 
         centerOfPanel.add(southPanel, BorderLayout.SOUTH);
 
@@ -93,17 +90,17 @@ public class Download extends JPanel
         detailsButton.setContentAreaFilled(false);
         detailsButton.setOpaque(false);
         detailsButton.setFocusable(false);
-        detailsButton.addMouseListener(new DownloadMouseHandler());
+        detailsButton.addActionListener(new DownloadActionListener());
         add(detailsButton, BorderLayout.EAST);
 
         validate();
         repaint();
     }
 
-    public class DownloadMouseHandler extends MouseAdapter
+    public class DownloadActionListener implements ActionListener
     {
         @Override
-        public void mouseClicked(MouseEvent e)
+        public void actionPerformed(ActionEvent e)
         {
             if (e.getSource().equals(openButton))
             {

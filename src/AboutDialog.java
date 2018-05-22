@@ -1,15 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class AboutDialog extends JDialog
-{
+public class AboutDialog extends JDialog {
     private JLabel author;
     private JLabel id;
     private JLabel startDate;
     private JLabel finalDate;
 
-    public AboutDialog(DownloadManagerFrame downloadManagerFrame, String name)
-    {
+    public AboutDialog(DownloadManagerFrame downloadManagerFrame, String name) {
         super(downloadManagerFrame, name);
         setLayout(new GridLayout(4, 1));
         setSize(350, 200);
@@ -35,44 +33,4 @@ public class AboutDialog extends JDialog
 
         setVisible(true);
     }
-
-
-//    /**
-//     * I handle the actions that happen with Mouse here
-//     */
-/*    public class AboutMouseHandler extends MouseAdapter
-    {
-        @Override
-        public void mouseClicked(MouseEvent e)
-        {
-            if (e.getSource().equals(newDownloadButton))
-            {
-                System.out.println("newDownloadButton");
-                setNewDownloadFrame();
-            }
-            else if (e.getSource().equals(resumeButton))
-            {
-                System.out.println("resumeButton");
-            }
-            else
-            {
-                System.out.println("Extra Buttons");
-            }
-        }
-
-        public void mousePressed(MouseEvent e)
-        {
-            if (e.getSource().equals(newDownloadMenuItem))
-            {
-                System.out.println("newDownloadMenuItem");
-                setNewDownloadFrame();
-            }
-            else if (e.getSource().equals(aboutMenuItem))
-            {
-                System.out.println("aboutMenuItem");
-                setAboutFrame();
-            }
-
-        }
-    }*/
 }

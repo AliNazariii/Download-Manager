@@ -1,7 +1,8 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
@@ -60,7 +61,7 @@ public class NewDownloadFrame extends JFrame
         fileChooserButton = new JButton("Browse", fileChooserIcon);
         fileChooserButton.setForeground(Color.decode("#32363f"));
         fileChooserButton.setFont(new Font("Titillium Web", 4, 20));
-        fileChooserButton.addMouseListener(new NewDownloadMouseHandler());
+        fileChooserButton.addActionListener(new NewDownloadActionListener());
         centerPanel.add(fileChooserButton);
 
         frame.add(centerPanel, BorderLayout.CENTER);
@@ -69,12 +70,12 @@ public class NewDownloadFrame extends JFrame
         downPanel.setOpaque(false);
 
         cancelButton = new JButton("Cancel");
-        cancelButton.addMouseListener(new NewDownloadMouseHandler());
+        cancelButton.addActionListener(new NewDownloadActionListener());
         cancelButton.setForeground(Color.decode("#32363f"));
         cancelButton.setFont(new Font("Titillium Web", 4, 20));
         downPanel.add(cancelButton);
         confirmButton = new JButton("Confirm");
-        confirmButton.addMouseListener(new NewDownloadMouseHandler());
+        confirmButton.addActionListener(new NewDownloadActionListener());
         confirmButton.setForeground(Color.decode("#32363f"));
         confirmButton.setFont(new Font("Titillium Web", 4, 20));
         downPanel.add(confirmButton);
@@ -86,8 +87,10 @@ public class NewDownloadFrame extends JFrame
     {
         fileChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
         fileChooser.setDialogTitle("Browse For Folder");
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int returnValue = fileChooser.showOpenDialog(null);
-        if (returnValue == JFileChooser.APPROVE_OPTION) {
+        if (returnValue == JFileChooser.APPROVE_OPTION)
+        {
             File selectedFile = fileChooser.getSelectedFile();
             System.out.println(selectedFile.getName());
             pathField.setText(selectedFile.getAbsolutePath());
@@ -95,12 +98,12 @@ public class NewDownloadFrame extends JFrame
     }
 
     /**
-     * I handle the actions that happen with Mouse here
+     * I handle the actions here
     */
-    private class NewDownloadMouseHandler extends MouseAdapter
+    private class NewDownloadActionListener implements ActionListener
     {
         @Override
-        public void mouseClicked(MouseEvent e)
+        public void actionPerformed(ActionEvent e)
         {
             if (e.getSource().equals(fileChooserButton))
             {
@@ -110,6 +113,10 @@ public class NewDownloadFrame extends JFrame
             else if (e.getSource().equals(confirmButton))
             {
                 System.out.println("confirmButton");
+                Download temp = new Download(URLField.getText());
+                DownloadManagerFrame.downloadQueue.getDownloadQueue().add(temp);
+                setVisible(false); //you can't see me!
+                dispose(); //Destroy the JFrame object
             }
             else if (e.getSource().equals(cancelButton))
             {

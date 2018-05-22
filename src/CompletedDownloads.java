@@ -8,9 +8,14 @@ public class CompletedDownloads extends JPanel
 
     public CompletedDownloads()
     {
-        super(new GridLayout(100, 1));
-        setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        super(new GridLayout(10, 1));
+        setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         completedDownloads = new ArrayList<>();
+    }
+
+    public ArrayList<Download> getCompletedDownloads()
+    {
+        return completedDownloads;
     }
 
     public void showDownloads()
