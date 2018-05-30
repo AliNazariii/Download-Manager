@@ -1,4 +1,6 @@
+import GUI.*;
 import javax.swing.*;
+import java.util.Set;
 
 /**
  * This is a Download Manager Program...
@@ -8,29 +10,21 @@ public class Main
 {
     public static void main(String[] args)
     {
-        //choose the default look and feel...Now we use Windows
-        try
-        {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        }
-        catch (ClassNotFoundException e)
-        {
-            e.printStackTrace();
-        }
-        catch (InstantiationException e)
-        {
-            e.printStackTrace();
-        }
-        catch (IllegalAccessException e)
-        {
-            e.printStackTrace();
-        }
-        catch (UnsupportedLookAndFeelException e)
-        {
-            e.printStackTrace();
-        }
+        DownloadManager JDM = new DownloadManager("Java Download Manager");
 
-        DownloadManagerFrame JDM = new DownloadManagerFrame("Java Download Manager");
+        try {
+            UIManager.setLookAndFeel(Setting.getLookAndFeel());
+        } catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+        } catch (InstantiationException e1) {
+            e1.printStackTrace();
+        } catch (IllegalAccessException e1) {
+            e1.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e1) {
+            e1.printStackTrace();
+        }
+        SwingUtilities.updateComponentTreeUI(DownloadManager.getFrame());
+
         JDM.showFrame();
     }
 }
