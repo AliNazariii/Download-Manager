@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.util.Vector;
 
 
 /**
@@ -34,11 +35,9 @@ public class DownloadManager
     private JMenuItem settingMenuItem;
     private JMenuItem exitMenuItem;
 
-    public static DownloadList downloadList;
     public static QueueFrame queueFrame;
 
     private Download selectedDownload;
-
 
     private JPanel rightSide;
 
@@ -52,7 +51,6 @@ public class DownloadManager
     private JButton settingButton;
     private JTextField filterFilesTextField;
 
-
     private JPanel leftSide;
 
     private JPanel downloadManagerLogo;
@@ -62,26 +60,40 @@ public class DownloadManager
 
     private JPanel myLogo;
 
-
     private Setting setting;
     private AboutDialog aboutDialog;
     private NewDownloadFrame newDownloadFrame;
 
 
+    private SettingFile settingFile;
+    private DownloadListFile downloadListFile;
+
     public DownloadManager(String name)
     {
-        //loadSetting();
+        loadSetting();
+        try
+        {
+            UIManager.setLookAndFeel(settingFile.lookAndFeel);
+        } catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+        } catch (InstantiationException e1) {
+            e1.printStackTrace();
+        } catch (IllegalAccessException e1) {
+            e1.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e1) {
+            e1.printStackTrace();
+        }
+
         frame = new JFrame(name);
-        //this is the size of the Main Frame
-        frame.setSize(800, 600);
-        //put the main frame to the center of the screen
-        frame.setLocationRelativeTo(null);
-        //set the Layout Manager
+        frame.setSize(settingFile.width, settingFile.height);
+        //frame.setLocationRelativeTo(null);
+        frame.setLocation(settingFile.X, settingFile.Y);
         frame.getContentPane().setLayout(new BorderLayout());
 
         setMenuBar();
         setLeftSide();
         setRightSide();
+        loadDownloadList();
         createDownloadList();
 
         SystemTray systemTray = SystemTray.getSystemTray();
@@ -454,8 +466,8 @@ public class DownloadManager
      */
     public void createDownloadList()
     {
-        downloadList = new DownloadList();
-        rightSide.add(downloadList.getPanel(), BorderLayout.CENTER);
+        //downloadListGenerator = new DownloadListGenerator();
+        //rightSide.add(downloadListGenerator.getPanel(), BorderLayout.CENTER);
     }
 
     /**
@@ -505,9 +517,160 @@ public class DownloadManager
         SwingUtilities.updateComponentTreeUI(frame);
     }
 
+    public void panelGenerator(DownloadListFile downloadListFile)
+    {
+        Vector<JPanel> downloadVectorPanels = new Vector<>();
+        for (Download x : downloadListFile.getDownloadVector())
+        {
+            JPanel downloadPanel = new JPanel(new BorderLayout());
+            downloadPanel.setBorder(BorderFactory.createEmptyBorder(1, 5, 1, 10));
+            downloadPanel.setBackground(Color.decode("#e7effb"));
+
+            JPanel eagleGetLogo = new JPanel();
+            ImageIcon eagleIcon = new ImageIcon(getClass().getResource("/Icons/eagleIcon.png"));
+            JLabel eagle = new JLabel(eagleIcon);
+            eagleGetLogo.add(eagle);
+            eagleGetLogo.setOpaque(false);
+            downloadPanel.add(eagleGetLogo, BorderLayout.WEST);
+
+            downloadPanel.addMouseListener(new MouseAdapter()
+            {
+                @Override
+                public void mousePressed(MouseEvent e)
+                {
+                    System.out.println("download panel clicked");
+                    downloadPanel.setBackground(Color.decode("#ecbf7e"));
+                }
+                /*@Override
+                public void mouseEntered(MouseEvent e)
+                {
+                    System.out.println("enter download panel");
+                    setBackground(Color.decode("#c3c1be"));
+                }
+                @Override
+                public void mouseExited(MouseEvent e)
+                {
+                    System.out.println("exit download panel");
+                    setBackground(Color.decode("#e7effb"));
+                }*/
+            });
+
+
+            JPanel centerOfPanel = new JPanel(new BorderLayout());
+            centerOfPanel.setOpaque(false);
+
+            JLabel nameOfFile = new JLabel(x.getName());
+            nameOfFile.setFont(new Font("Titillium Web", 4, 12));
+            nameOfFile.setOpaque(false);
+            centerOfPanel.add(nameOfFile, BorderLayout.NORTH);
+
+            JProgressBar progressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
+            progressBar.setStringPainted(true);
+            progressBar.setForeground(Color.decode("#018f99"));
+            centerOfPanel.add(progressBar, BorderLayout.CENTER);
+
+            JLabel sizeOfFile = new JLabel(x.getSize());
+            sizeOfFile.setFont(new Font("Titillium Web", 4, 12));
+            sizeOfFile.setOpaque(false);
+            centerOfPanel.add(sizeOfFile, BorderLayout.SOUTH);
+
+            downloadPanel.add(centerOfPanel, BorderLayout.CENTER);
+
+            downloadVectorPanels.add(downloadPanel);
+        }
+        JPanel panel = new JPanel(new GridLayout(20, 1));
+        JScrollPane scrollPane = new JScrollPane(panel);
+
+        for (JPanel x : downloadVectorPanels)
+        {
+            panel.add(x);
+        }
+    }
+
     public static JFrame getFrame()
     {
         return frame;
+    }
+
+    public void save()
+    {
+        saveSetting();
+        saveDownloadList();
+    }
+
+    public void saveDownloadList()
+    {
+        try (FileOutputStream fileOutputStream = new FileOutputStream("Files/List.jdm"))
+        {
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+
+            objectOutputStream.writeObject();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    public void loadDownloadList()
+    {
+        try (FileInputStream fileInputStream = new FileInputStream("Files/List.jdm"))
+        {
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            downloadListGenerator = () objectInputStream.readObject();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        rightSide.add(, BorderLayout.CENTER);
+        showFrame();
+    }
+
+    public void saveSetting()
+    {
+        settingFile = new SettingFile();
+        settingFile.lookAndFeel = setting.getLookAndFeel();
+        settingFile.maxSimultaneouslyDownload = setting.getMaxSimultaneouslyDownload();
+        settingFile.path = setting.getPath();
+        settingFile.X = frame.getX();
+        settingFile.Y = frame.getY();
+        settingFile.width = frame.getWidth();
+        settingFile.height = frame.getHeight();
+
+        try (FileOutputStream fileOutputStream = new FileOutputStream("Files/Settings.jdm"))
+        {
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+
+            objectOutputStream.writeObject(settingFile);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    public void loadSetting()
+    {
+        settingFile = null;
+        try (FileInputStream fileInputStream = new FileInputStream("Files/Settings.jdm"))
+        {
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            settingFile = (SettingFile) objectInputStream.readObject();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        setting.setMaxSimultaneouslyDownload(settingFile.maxSimultaneouslyDownload);
+        setting.setPath(settingFile.path);
+        setting.setLookAndFeel(settingFile.lookAndFeel);
     }
 
     /**
@@ -589,7 +752,7 @@ public class DownloadManager
             else if (e.getSource().equals(exitMenuItem))
             {
                 System.out.println("exitMenuItem");
-                SettingFile.saveSetting();
+                save();
                 System.exit(0);
             }
             else if (e.getSource().equals(aboutMenuItem))
@@ -740,39 +903,4 @@ public class DownloadManager
             }
         }
     }
-
-    public void saveSetting()
-    {
-        try (FileOutputStream fileOutputStream = new FileOutputStream("Settings.jdm"))
-        {
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-
-            objectOutputStream.writeObject(setting);
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
-
-    public void loadSetting()
-    {
-        try (FileInputStream fileInputStream = new FileInputStream("Settings.jdm"))
-        {
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-
-            setting = (Setting) objectInputStream.readObject();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        catch (ClassNotFoundException e)
-        {
-            e.printStackTrace();
-        }
-    }
-
-
-
 }

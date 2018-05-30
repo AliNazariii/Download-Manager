@@ -1,5 +1,7 @@
 package GUI;
 
+import Files.SettingFile;
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -103,7 +105,7 @@ public class Setting
 
         pathLabel = new JLabel("Save to: ");
         pathPanel.add(pathLabel, BorderLayout.WEST);
-        pathField = new JTextField("C:\\Users\\Ali_Z\\Desktop");
+        pathField = new JTextField(path);
         pathField.setForeground(new Color(89, 89, 89));
         pathPanel.add(pathField, BorderLayout.CENTER);
 
@@ -193,15 +195,27 @@ public class Setting
     {
         return lookAndFeel;
     }
+    public static void setLookAndFeel(String input)
+    {
+        lookAndFeel = input;
+    }
 
     public static String getPath()
     {
         return path;
     }
+    public static void setMaxSimultaneouslyDownload(int input)
+    {
+        maxSimultaneouslyDownload = input;
+    }
 
     public static int getMaxSimultaneouslyDownload()
     {
         return maxSimultaneouslyDownload;
+    }
+    public static void setPath(String input)
+    {
+        path = input;
     }
 
     public class SettingActionListener implements ActionListener
@@ -229,9 +243,8 @@ public class Setting
                     e1.printStackTrace();
                 }
                 SwingUtilities.updateComponentTreeUI(DownloadManager.getFrame());
-                //frame.setVisible(false); //you can't see me!
+                frame.setVisible(false); //you can't see me!
                 DownloadManager.showFrame();
-                frame.dispose(); //Destroy the JFrame object
             }
             else if (e.getSource().equals(cancelButton))
             {

@@ -163,19 +163,19 @@ public class NewDownloadFrame extends JFrame
             if (e.getSource().equals(confirmButton))
             {
                 System.out.println("confirmButton");
-                Download temp = new Download(URLField.getText(), "test", "test");
+                Download temp = new Download(URLField.getText());
                 if (checkBox.isSelected())
                 {
                     //DownloadManagerFrame.queueFrame.getInProgressDownload().add(temp);
                 }
                 else
                 {
-                    DownloadManager.downloadList.getDownloadArrayList().add(temp);
-                    DownloadManager.downloadList.showDownloads();
+                    DownloadManager.downloadListGenerator.getDownloadVector().add(temp);
+                    DownloadManager.downloadListGenerator.showDownloads();
                 }
-                //setVisible(false); //you can't see me!
+                setVisible(false); //you can't see me!
                 DownloadManager.showFrame();
-                dispose(); //Destroy the JFrame object
+                //dispose(); //Destroy the JFrame object
             }
             else if (e.getSource().equals(cancelButton))
             {
