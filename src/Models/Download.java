@@ -12,13 +12,15 @@ public class Download implements Serializable
     //private String speed;
     private String URL;
     private String path;
-    private Date startLabel;
+    //private Date startLabel;
 
     public Download(String URL)
     {
         this.URL = URL;
+        this.name = "test";
+        this.size = "0";
+        this.path = "Desktop";
 
-        DownloadListFile.addDownload(this);
     }
 
     public String getName()

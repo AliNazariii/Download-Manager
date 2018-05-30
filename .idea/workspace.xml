@@ -2,31 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38a204c7-e8ac-4cb7-8700-d0d39cc69f99" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Files/DownloadListFile.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Settings.jdm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Files/SettingFile.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Files/SettingFile.class" />
+      <change beforePath="$PROJECT_DIR$/Files/List.jdm" afterPath="$PROJECT_DIR$/Files/List.jdm" />
+      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Files/DownloadListFile.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Files/DownloadListFile.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager$1.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager$1.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager$2.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager$2.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager$JDMActionListener.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager$JDMActionListener.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/NewDownloadFrame$NewDownloadActionListener.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/NewDownloadFrame$NewDownloadActionListener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/Setting$1.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/Setting$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/Setting$2.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/Setting$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/Setting$SettingActionListener.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/Setting$SettingActionListener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/Setting.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/Setting.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Main.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/Download$1.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/Download$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/Download$DownloadActionListener.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/Download$DownloadActionListener.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/NewDownloadFrame.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/NewDownloadFrame.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/Download$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/Download$DownloadActionListener.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/Download.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/Download.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/DownloadList.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/DownloadList.class" />
-      <change beforePath="$PROJECT_DIR$/src/Files/SettingFile.java" afterPath="$PROJECT_DIR$/src/Files/SettingFile.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/Models/DownloadList.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Files/DownloadListFile.java" afterPath="$PROJECT_DIR$/src/Files/DownloadListFile.java" />
       <change beforePath="$PROJECT_DIR$/src/GUI/DownloadManager.java" afterPath="$PROJECT_DIR$/src/GUI/DownloadManager.java" />
       <change beforePath="$PROJECT_DIR$/src/GUI/NewDownloadFrame.java" afterPath="$PROJECT_DIR$/src/GUI/NewDownloadFrame.java" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Setting.java" afterPath="$PROJECT_DIR$/src/GUI/Setting.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/Models/Download.java" afterPath="$PROJECT_DIR$/src/Models/Download.java" />
-      <change beforePath="$PROJECT_DIR$/src/Models/DownloadList.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,13 +36,12 @@
       <file leaf-file-name="DownloadManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/DownloadManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="520" column="4" lean-forward="false" selection-start-line="520" selection-start-column="4" selection-end-line="520" selection-end-column="4" />
+            <state relative-caret-position="159">
+              <caret line="592" column="38" lean-forward="true" selection-start-line="592" selection-start-column="38" selection-end-line="592" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#DownloadManager#0;class#DownloadManager#0" expanded="false" />
-                <element signature="e#3079#3080#0" expanded="true" />
-                <element signature="e#3133#3134#0" expanded="true" />
+                <element signature="e#3164#3165#0" expanded="true" />
+                <element signature="e#3218#3219#0" expanded="true" />
                 <element signature="docComment;method#setMenuBar#0;class#DownloadManager#0" expanded="false" />
                 <element signature="method#setMenuBar#0;class#DownloadManager#0" expanded="false" />
                 <element signature="docComment;method#setLeftSide#0;class#DownloadManager#0" expanded="false" />
@@ -59,7 +50,6 @@
                 <element signature="method#setRightSide#0;class#DownloadManager#0" expanded="false" />
                 <element signature="docComment;method#setToolBar#0;class#DownloadManager#0" expanded="false" />
                 <element signature="method#setToolBar#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;method#createDownloadList#0;class#DownloadManager#0" expanded="false" />
                 <element signature="docComment;method#showFrame#0;class#DownloadManager#0" expanded="false" />
                 <element signature="method#showFrame#0;class#DownloadManager#0" expanded="false" />
                 <element signature="docComment;method#setSettingFrame#0;class#DownloadManager#0" expanded="false" />
@@ -68,13 +58,31 @@
                 <element signature="docComment;method#setUI#0;class#DownloadManager#0" expanded="false" />
                 <element signature="method#panelGenerator#0;class#DownloadManager#0" expanded="false" />
                 <element signature="method#save#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#saveDownloadList#0;class#DownloadManager#0" expanded="false" />
                 <element signature="method#loadDownloadList#0;class#DownloadManager#0" expanded="false" />
                 <element signature="method#saveSetting#0;class#DownloadManager#0" expanded="false" />
                 <element signature="method#loadSetting#0;class#DownloadManager#0" expanded="false" />
                 <element signature="docComment;class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
                 <element signature="class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewDownloadFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/NewDownloadFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="534">
+              <caret line="168" column="13" lean-forward="true" selection-start-line="168" selection-start-column="13" selection-end-line="168" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#NewDownloadFrame#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="method#setURL#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="method#setPath#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="method#setQueueOrNot#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="method#setDownPanel#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="docComment;method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -83,8 +91,8 @@
       <file leaf-file-name="Download.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Download.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="281">
+              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,13 +100,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SettingFile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Files/SettingFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DownloadListFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Files/DownloadListFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#232#233#0" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,6 +151,8 @@
       <find>Color</find>
       <find>Download</find>
       <find>add</find>
+      <find>downloadListFile</find>
+      <find>settingFile</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,11 +190,11 @@
         <option value="$PROJECT_DIR$/src/GUI/Setting.java" />
         <option value="$PROJECT_DIR$/src/Files/SettingFile.java" />
         <option value="$PROJECT_DIR$/src/Models/DownloadList.java" />
-        <option value="$PROJECT_DIR$/src/GUI/NewDownloadFrame.java" />
         <option value="$PROJECT_DIR$/src/Models/DownloadListGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Models/Download.java" />
-        <option value="$PROJECT_DIR$/src/Files/DownloadListFile.java" />
+        <option value="$PROJECT_DIR$/src/GUI/NewDownloadFrame.java" />
         <option value="$PROJECT_DIR$/src/GUI/DownloadManager.java" />
+        <option value="$PROJECT_DIR$/src/Files/DownloadListFile.java" />
+        <option value="$PROJECT_DIR$/src/Models/Download.java" />
       </list>
     </option>
   </component>
@@ -426,12 +447,12 @@
       <workItem from="1527230461763" duration="18787000" />
       <workItem from="1527413573863" duration="8746000" />
       <workItem from="1527494302966" duration="1195000" />
-      <workItem from="1527616906950" duration="30687000" />
+      <workItem from="1527616906950" duration="38867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199856000" />
+    <option name="totallyTimeSpent" value="208036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -446,7 +467,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27925116" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27925116" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27925116" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -475,7 +496,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -797,31 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Setting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="method#Setting#0;class#Setting#0" expanded="false" />
-            <element signature="method#setMaxSimultaneouslyDownload#0;class#Setting#0" expanded="false" />
-            <element signature="method#setPathPanel#0;class#Setting#0" expanded="false" />
-            <element signature="method#lookAndFeel#0;class#Setting#0" expanded="false" />
-            <element signature="method#buttons#0;class#Setting#0" expanded="false" />
-            <element signature="method#setFileChooser#0;class#Setting#0" expanded="false" />
-            <element signature="class#SettingActionListener#0;class#Setting#0" expanded="false" />
-            <element signature="method#showFrame#0;class#Setting#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Files/SettingFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1">
@@ -838,14 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/NewDownloadFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="165" column="63" lean-forward="false" selection-start-line="165" selection-start-column="63" selection-end-line="165" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/DownloadListGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -854,35 +842,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Files/SettingFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Setting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="method#Setting#0;class#Setting#0" expanded="false" />
+            <element signature="method#setMaxSimultaneouslyDownload#0;class#Setting#0" expanded="false" />
+            <element signature="method#setPathPanel#0;class#Setting#0" expanded="false" />
+            <element signature="method#lookAndFeel#0;class#Setting#0" expanded="false" />
+            <element signature="method#buttons#0;class#Setting#0" expanded="false" />
+            <element signature="method#setFileChooser#0;class#Setting#0" expanded="false" />
+            <element signature="class#SettingActionListener#0;class#Setting#0" expanded="false" />
+            <element signature="method#showFrame#0;class#Setting#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Files/DownloadListFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Download.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="281">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/DownloadManager.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/NewDownloadFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="520" column="4" lean-forward="false" selection-start-line="520" selection-start-column="4" selection-end-line="520" selection-end-column="4" />
+        <state relative-caret-position="534">
+          <caret line="168" column="13" lean-forward="true" selection-start-line="168" selection-start-column="13" selection-end-line="168" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#DownloadManager#0;class#DownloadManager#0" expanded="false" />
-            <element signature="e#3079#3080#0" expanded="true" />
-            <element signature="e#3133#3134#0" expanded="true" />
+            <element signature="method#NewDownloadFrame#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#setURL#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#setPath#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#setQueueOrNot#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#setDownPanel#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="docComment;method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/DownloadManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="592" column="38" lean-forward="true" selection-start-line="592" selection-start-column="38" selection-end-line="592" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3164#3165#0" expanded="true" />
+            <element signature="e#3218#3219#0" expanded="true" />
             <element signature="docComment;method#setMenuBar#0;class#DownloadManager#0" expanded="false" />
             <element signature="method#setMenuBar#0;class#DownloadManager#0" expanded="false" />
             <element signature="docComment;method#setLeftSide#0;class#DownloadManager#0" expanded="false" />
@@ -891,7 +922,6 @@
             <element signature="method#setRightSide#0;class#DownloadManager#0" expanded="false" />
             <element signature="docComment;method#setToolBar#0;class#DownloadManager#0" expanded="false" />
             <element signature="method#setToolBar#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;method#createDownloadList#0;class#DownloadManager#0" expanded="false" />
             <element signature="docComment;method#showFrame#0;class#DownloadManager#0" expanded="false" />
             <element signature="method#showFrame#0;class#DownloadManager#0" expanded="false" />
             <element signature="docComment;method#setSettingFrame#0;class#DownloadManager#0" expanded="false" />
@@ -900,13 +930,11 @@
             <element signature="docComment;method#setUI#0;class#DownloadManager#0" expanded="false" />
             <element signature="method#panelGenerator#0;class#DownloadManager#0" expanded="false" />
             <element signature="method#save#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#saveDownloadList#0;class#DownloadManager#0" expanded="false" />
             <element signature="method#loadDownloadList#0;class#DownloadManager#0" expanded="false" />
             <element signature="method#saveSetting#0;class#DownloadManager#0" expanded="false" />
             <element signature="method#loadSetting#0;class#DownloadManager#0" expanded="false" />
             <element signature="docComment;class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
             <element signature="class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
           </folding>
         </state>
       </provider>

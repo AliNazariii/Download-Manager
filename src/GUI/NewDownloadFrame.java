@@ -1,5 +1,6 @@
 package GUI;
 
+import Files.DownloadListFile;
 import Models.*;
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
@@ -32,12 +33,17 @@ public class NewDownloadFrame extends JFrame
     private JButton confirmButton;
     private JButton cancelButton;
 
-    public NewDownloadFrame()
+    private DownloadManager downloadManager;
+
+    public NewDownloadFrame(DownloadManager downloadManager)
     {
+
         super("New Download");
         setSize(500, 250);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(NewDownloadFrame.HIDE_ON_CLOSE);
+
+        this.downloadManager = downloadManager;
 
         frame = new JPanel(new BorderLayout(10, 10));
         frame.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -149,7 +155,6 @@ public class NewDownloadFrame extends JFrame
         setVisible(true);
     }
 
-
     private class NewDownloadActionListener implements ActionListener
     {
         @Override
@@ -164,18 +169,18 @@ public class NewDownloadFrame extends JFrame
             {
                 System.out.println("confirmButton");
                 Download temp = new Download(URLField.getText());
-                if (checkBox.isSelected())
+                if (!checkBox.isSelected())
                 {
-                    //DownloadManagerFrame.queueFrame.getInProgressDownload().add(temp);
+                    downloadManager.getDownloadListFile().getDownloadVector().add(temp);
+                    downloadManager.panelGenerator(temp);
                 }
                 else
                 {
-                    DownloadManager.downloadListGenerator.getDownloadVector().add(temp);
-                    DownloadManager.downloadListGenerator.showDownloads();
+                    System.out.println("No Queue");
                 }
                 setVisible(false); //you can't see me!
                 DownloadManager.showFrame();
-                //dispose(); //Destroy the JFrame object
+                dispose(); //Destroy the JFrame object
             }
             else if (e.getSource().equals(cancelButton))
             {

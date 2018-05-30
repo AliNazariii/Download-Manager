@@ -9,9 +9,9 @@ public class DownloadListFile implements Serializable
 {
     private static Vector<Download> downloadVector;
 
-    public static void addDownload(Download input)
+    public DownloadListFile()
     {
-        downloadVector.add(input);
+        downloadVector = new Vector<>();
     }
 
     public Vector<Download> getDownloadVector()
