@@ -55,10 +55,10 @@ public class DownloadManager
 
 
     private SettingFile settingFile;
-    private DownloadListFile downloadListFile;
-    private Vector<Download> downloadVector;
+    private DownloadList downloadList;
+    private Vector<Download> downloadVectorSave;  //I serialize this vector
 
-    private JPanel downloadPanel;
+    private static JPanel downloadPanel;
     private JScrollPane scrollPane;
 
 
@@ -98,7 +98,6 @@ public class DownloadManager
         setMenuBar();
         setLeftSide();
         setRightSide();
-        loadDownloadList();
 
         SystemTray systemTray = SystemTray.getSystemTray();
         Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -345,14 +344,18 @@ public class DownloadManager
 
         setToolBar();
 
-        downloadListFile = new DownloadListFile();
-        //downloadVector = new Vector<>();
-        downloadPanel = new JPanel(new GridLayout(20, 1));
+        downloadList = new DownloadList();
+        loadDownloadList();
         scrollPane = new JScrollPane(downloadPanel);
         rightSide.add(scrollPane, BorderLayout.CENTER);
 
         //at last I add the right panel to the main frame
         frame.add(rightSide, BorderLayout.CENTER);
+    }
+
+    public static void setDownloadPanel(JPanel input)
+    {
+        downloadPanel = input;
     }
 
     /**
@@ -517,82 +520,9 @@ public class DownloadManager
         SwingUtilities.updateComponentTreeUI(frame);
     }
 
-    public DownloadListFile getDownloadListFile()
+    public DownloadList getDownloadList()
     {
-        return downloadListFile;
-    }
-
-    public void panelGenerator(Download x)
-    {
-        JPanel download = new JPanel(new BorderLayout());
-        download.setBorder(BorderFactory.createEmptyBorder(1, 5, 1, 10));
-        download.setBackground(Color.decode("#e7effb"));
-
-        JPanel eagleGetLogo = new JPanel();
-        ImageIcon eagleIcon = new ImageIcon(getClass().getResource("/Icons/eagleIcon.png"));
-        JLabel eagle = new JLabel(eagleIcon);
-        eagleGetLogo.add(eagle);
-        eagleGetLogo.setOpaque(false);
-        download.add(eagleGetLogo, BorderLayout.WEST);
-
-        download.addMouseListener(new MouseAdapter()
-        {
-            @Override
-            public void mousePressed(MouseEvent e)
-            {
-                System.out.println("download panel clicked");
-                download.setBackground(Color.decode("#ecbf7e"));
-            }
-            /*@Override
-            public void mouseEntered(MouseEvent e)
-            {
-                System.out.println("enter download panel");
-                setBackground(Color.decode("#c3c1be"));
-            }
-            @Override
-            public void mouseExited(MouseEvent e)
-            {
-                System.out.println("exit download panel");
-                setBackground(Color.decode("#e7effb"));
-            }*/
-        });
-
-
-        JPanel centerOfPanel = new JPanel(new BorderLayout());
-        centerOfPanel.setOpaque(false);
-
-        JLabel nameOfFile = new JLabel(x.getName());
-        nameOfFile.setFont(new Font("Titillium Web", 4, 12));
-        nameOfFile.setOpaque(false);
-        centerOfPanel.add(nameOfFile, BorderLayout.NORTH);
-
-        JProgressBar progressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
-        progressBar.setStringPainted(true);
-        progressBar.setForeground(Color.decode("#018f99"));
-        centerOfPanel.add(progressBar, BorderLayout.CENTER);
-
-        /*JLabel sizeOfFile = new JLabel(x.getSize());
-        sizeOfFile.setFont(new Font("Titillium Web", 4, 12));
-        sizeOfFile.setOpaque(false);
-        centerOfPanel.add(sizeOfFile, BorderLayout.SOUTH);*/
-
-        download.add(centerOfPanel, BorderLayout.CENTER);
-
-        //downloadVector.add(x);
-
-        downloadPanel.add(download);
-        showFrame();
-    }
-
-    public void vectorPanelGenerator(Vector<Download> downloadVector)
-    {
-        for (Download x : downloadVector)
-        {
-            panelGenerator(x);
-        }
-        System.out.println(downloadListFile.getDownloadVector().size() + "  vectorPanelGenerator");
-        //FIXME save download lists...
-        showFrame();
+        return downloadList;
     }
 
     public static JFrame getFrame()
@@ -608,11 +538,11 @@ public class DownloadManager
 
     public void saveDownloadList()
     {
-        downloadVector = downloadListFile.getDownloadVector();
+        downloadVectorSave = downloadList.getDownloadVector();
         try (FileOutputStream fileOutputStream = new FileOutputStream("Files/List.jdm"))
         {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(downloadVector);
+            objectOutputStream.writeObject(downloadVectorSave);
         }
         catch (IOException e)
         {
@@ -624,7 +554,7 @@ public class DownloadManager
         try (FileInputStream fileInputStream = new FileInputStream("Files/List.jdm"))
         {
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            downloadVector = (Vector<Download>) objectInputStream.readObject();
+            downloadVectorSave = (Vector<Download>) objectInputStream.readObject();
         }
         catch (IOException e)
         {
@@ -634,8 +564,8 @@ public class DownloadManager
         {
             e.printStackTrace();
         }
-        downloadListFile.setDownloadVector(downloadVector);
-        vectorPanelGenerator(downloadVector);
+        downloadList.setDownloadListVector(downloadVectorSave);
+        downloadList.vectorPanelGenerator(downloadList.getDownloadVector());
         showFrame();
     }
 

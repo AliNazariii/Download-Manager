@@ -1,6 +1,5 @@
 package GUI;
 
-import Files.DownloadListFile;
 import Models.*;
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
@@ -169,11 +168,10 @@ public class NewDownloadFrame extends JFrame
             {
                 System.out.println("confirmButton");
                 Download temp = new Download(URLField.getText());
-                System.out.println(downloadManager.getDownloadListFile().getDownloadVector().size());
                 if (!checkBox.isSelected())
                 {
-                    downloadManager.getDownloadListFile().getDownloadVector().add(temp);
-                    downloadManager.panelGenerator(temp);
+                    downloadManager.getDownloadList().addDownload(temp);
+                    downloadManager.showFrame();
                 }
                 else
                 {
