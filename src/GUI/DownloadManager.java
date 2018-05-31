@@ -56,7 +56,7 @@ public class DownloadManager
 
     private SettingFile settingFile;
     private DownloadListFile downloadListFile;
-    private Vector<JPanel> downloadVectorPanels;
+    private Vector<Download> downloadVector;
 
     private JPanel downloadPanel;
     private JScrollPane scrollPane;
@@ -344,8 +344,9 @@ public class DownloadManager
         rightSide.setBackground(Color.decode("#e7effb"));
 
         setToolBar();
+
         downloadListFile = new DownloadListFile();
-         downloadVectorPanels = new Vector<>();
+        //downloadVector = new Vector<>();
         downloadPanel = new JPanel(new GridLayout(20, 1));
         scrollPane = new JScrollPane(downloadPanel);
         rightSide.add(scrollPane, BorderLayout.CENTER);
@@ -577,19 +578,19 @@ public class DownloadManager
 
         download.add(centerOfPanel, BorderLayout.CENTER);
 
-        downloadVectorPanels.add(download);
+        //downloadVector.add(x);
 
         downloadPanel.add(download);
         showFrame();
     }
 
-    public void vectorPanelGenerator(DownloadListFile downloadListFile)
+    public void vectorPanelGenerator(Vector<Download> downloadVector)
     {
-        for (Download x : downloadListFile.getDownloadVector())
+        for (Download x : downloadVector)
         {
             panelGenerator(x);
         }
-        System.out.println(downloadListFile.getDownloadVector().size());
+        System.out.println(downloadListFile.getDownloadVector().size() + "  vectorPanelGenerator");
         //FIXME save download lists...
         showFrame();
     }
@@ -607,11 +608,11 @@ public class DownloadManager
 
     public void saveDownloadList()
     {
+        downloadVector = downloadListFile.getDownloadVector();
         try (FileOutputStream fileOutputStream = new FileOutputStream("Files/List.jdm"))
         {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-
-            objectOutputStream.writeObject(downloadListFile);
+            objectOutputStream.writeObject(downloadVector);
         }
         catch (IOException e)
         {
@@ -623,8 +624,7 @@ public class DownloadManager
         try (FileInputStream fileInputStream = new FileInputStream("Files/List.jdm"))
         {
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            downloadListFile = (DownloadListFile) objectInputStream.readObject();
-            System.out.println(downloadListFile.getDownloadVector().size());
+            downloadVector = (Vector<Download>) objectInputStream.readObject();
         }
         catch (IOException e)
         {
@@ -634,7 +634,8 @@ public class DownloadManager
         {
             e.printStackTrace();
         }
-        vectorPanelGenerator(downloadListFile);
+        downloadListFile.setDownloadVector(downloadVector);
+        vectorPanelGenerator(downloadVector);
         showFrame();
     }
 

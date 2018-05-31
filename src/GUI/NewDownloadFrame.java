@@ -169,6 +169,7 @@ public class NewDownloadFrame extends JFrame
             {
                 System.out.println("confirmButton");
                 Download temp = new Download(URLField.getText());
+                System.out.println(downloadManager.getDownloadListFile().getDownloadVector().size());
                 if (!checkBox.isSelected())
                 {
                     downloadManager.getDownloadListFile().getDownloadVector().add(temp);
@@ -178,8 +179,8 @@ public class NewDownloadFrame extends JFrame
                 {
                     System.out.println("No Queue");
                 }
-                setVisible(false); //you can't see me!
-                DownloadManager.showFrame();
+                //setVisible(false); //you can't see me!
+                //DownloadManager.showFrame();
                 dispose(); //Destroy the JFrame object
             }
             else if (e.getSource().equals(cancelButton))

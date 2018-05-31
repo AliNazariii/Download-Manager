@@ -18,4 +18,9 @@ public class DownloadListFile implements Serializable
     {
         return downloadVector;
     }
+
+    public static void setDownloadVector(Vector<Download> downloadVector)
+    {
+        DownloadListFile.downloadVector = downloadVector;
+    }
 }
