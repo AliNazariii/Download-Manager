@@ -9,6 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.IOException;
 import java.util.Vector;
 
 
@@ -80,8 +82,16 @@ public class DownloadList
                 {
                     System.out.println("open download info by right click");
                     new DownloadInfo(DownloadManager.getFrame(), "Download", x);
-                } else if (e.getClickCount() == 2)
+                }
+                else if (e.getClickCount() == 2)
                 {
+                    try
+                    {
+                        Desktop.getDesktop().open(new File(x.getPath() + "/" + x.getName()));
+                    } catch (IOException e1)
+                    {
+                        e1.printStackTrace();
+                    }
                     System.out.println("Open file by double click");
                 }
             }
@@ -132,8 +142,8 @@ public class DownloadList
         {
             case 0:
             {
-                /*System.out.println(downloadListVector.size());
                 downloadListVector.remove(selectedDownload);
+                /*System.out.println(downloadListVector.size());
                 downloadPanel = new JPanel(new GridLayout(20, 1));
                 scrollPane = new JScrollPane(downloadPanel);
                 vectorPanelGenerator(downloadListVector);

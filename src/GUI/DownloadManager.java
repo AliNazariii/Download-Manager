@@ -7,6 +7,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.Vector;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 
 /**
@@ -767,6 +769,43 @@ public class DownloadManager
     {
         saveSetting();
         saveDownloadList();
+        generateZip();
+    }
+
+    public void generateZip()
+    {
+        String[] files = {"Files/List.jdm", "Files/Settings.jdm"};
+        String zipFile = "Export.zip";
+        try
+        {
+            byte[] buffer = new byte[2048];
+            FileOutputStream out = new FileOutputStream(zipFile);
+            ZipOutputStream zip = new ZipOutputStream(out);
+            for (int i = 0; i < files.length; i++)
+            {
+                File save = new File(files[i]);
+                FileInputStream in = new FileInputStream(save);
+                zip.putNextEntry(new ZipEntry(save.getName()));
+
+                int length;
+                while ((length = in.read(buffer)) > 0)
+                {
+                    zip.write(buffer, 0, length);
+                }
+
+                zip.closeEntry();
+                in.close();
+            }
+            zip.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public void saveDownloadList()

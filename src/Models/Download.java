@@ -1,8 +1,7 @@
 package Models;
 
-import Files.*;
 import java.io.Serializable;
-import java.util.*;
+import java.net.MalformedURLException;
 
 public class Download implements Serializable
 {
@@ -14,13 +13,12 @@ public class Download implements Serializable
     private String path;
     //private Date startLabel;
 
-    public Download(String URL)
+    public Download(String URL, String path)
     {
         this.URL = URL;
-        this.name = "test";
+        this.name = "Download Name";
         this.size = "0";
-        this.path = "Desktop";
-
+        this.path = path;
     }
 
     public String getName()
@@ -38,5 +36,10 @@ public class Download implements Serializable
     public String getURL()
     {
         return URL;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
     }
 }

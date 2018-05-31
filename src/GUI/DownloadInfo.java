@@ -43,7 +43,7 @@ public class DownloadInfo extends JDialog
         fileLabel.setFont(new Font("Titillium Web", 4, 14));
         add(fileLabel);
         //filePanel.add(fileLabel, BorderLayout.WEST);
-        fileField = new JTextField("This is a Test");
+        fileField = new JTextField(download.getName());
         fileField.setEditable(false);
         add(fileField);
         //filePanel.add(fileField, BorderLayout.CENTER);
@@ -67,7 +67,7 @@ public class DownloadInfo extends JDialog
         pathLabel.setFont(new Font("Titillium Web", 4, 14));
         add(pathLabel);
         //pathPanel.add(pathLabel, BorderLayout.WEST);
-        pathField = new JTextField("This is a Test");
+        pathField = new JTextField(download.getPath());
         pathField.setEditable(false);
         add(pathField);
         //.add(pathField, BorderLayout.CENTER);
@@ -91,7 +91,7 @@ public class DownloadInfo extends JDialog
         linkLabel.setFont(new Font("Titillium Web", 4, 14));
         add(linkLabel);
         //linkPanel.add(linkLabel, BorderLayout.WEST);
-        linkField = new JTextField("This is a Test");
+        linkField = new JTextField(download.getURL());
         linkField.setEditable(false);
         add(linkField);
         //linkPanel.add(linkField, BorderLayout.CENTER);
