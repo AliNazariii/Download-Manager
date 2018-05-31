@@ -35,9 +35,7 @@ public class DownloadManager
     private JMenuItem exitMenuItem;
 
 
-    private Download selectedDownload;
-
-    private JPanel rightSide;
+    private static JPanel rightSide;
 
     private JToolBar toolBar;
     private JButton newDownloadButton;
@@ -55,11 +53,9 @@ public class DownloadManager
 
 
     private SettingFile settingFile;
-    private DownloadList downloadList;
+    private static DownloadList downloadList;
     private Vector<Download> downloadVectorSave;  //I serialize this vector
 
-    private static JPanel downloadPanel;
-    private JScrollPane scrollPane;
 
 
     private JPanel leftSide;
@@ -346,16 +342,9 @@ public class DownloadManager
 
         downloadList = new DownloadList();
         loadDownloadList();
-        scrollPane = new JScrollPane(downloadPanel);
-        rightSide.add(scrollPane, BorderLayout.CENTER);
 
         //at last I add the right panel to the main frame
         frame.add(rightSide, BorderLayout.CENTER);
-    }
-
-    public static void setDownloadPanel(JPanel input)
-    {
-        downloadPanel = input;
     }
 
     /**
@@ -524,92 +513,14 @@ public class DownloadManager
     {
         return downloadList;
     }
+    public static JPanel getRightSide()
+    {
+        return rightSide;
+    }
 
     public static JFrame getFrame()
     {
         return frame;
-    }
-
-    public void save()
-    {
-        saveSetting();
-        saveDownloadList();
-    }
-
-    public void saveDownloadList()
-    {
-        downloadVectorSave = downloadList.getDownloadVector();
-        try (FileOutputStream fileOutputStream = new FileOutputStream("Files/List.jdm"))
-        {
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(downloadVectorSave);
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
-    public void loadDownloadList()
-    {
-        try (FileInputStream fileInputStream = new FileInputStream("Files/List.jdm"))
-        {
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            downloadVectorSave = (Vector<Download>) objectInputStream.readObject();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        catch (ClassNotFoundException e)
-        {
-            e.printStackTrace();
-        }
-        downloadList.setDownloadListVector(downloadVectorSave);
-        downloadList.vectorPanelGenerator(downloadList.getDownloadVector());
-        showFrame();
-    }
-
-    public void saveSetting()
-    {
-        settingFile = new SettingFile();
-        settingFile.lookAndFeel = setting.getLookAndFeel();
-        settingFile.maxSimultaneouslyDownload = setting.getMaxSimultaneouslyDownload();
-        settingFile.path = setting.getPath();
-        settingFile.X = frame.getX();
-        settingFile.Y = frame.getY();
-        settingFile.width = frame.getWidth();
-        settingFile.height = frame.getHeight();
-
-        try (FileOutputStream fileOutputStream = new FileOutputStream("Files/Settings.jdm"))
-        {
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-
-            objectOutputStream.writeObject(settingFile);
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
-    public void loadSetting()
-    {
-        settingFile = null;
-        try (FileInputStream fileInputStream = new FileInputStream("Files/Settings.jdm"))
-        {
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            settingFile = (SettingFile) objectInputStream.readObject();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        catch (ClassNotFoundException e)
-        {
-            e.printStackTrace();
-        }
-        setting.setMaxSimultaneouslyDownload(settingFile.maxSimultaneouslyDownload);
-        setting.setPath(settingFile.path);
-        setting.setLookAndFeel(settingFile.lookAndFeel);
     }
 
     /**
@@ -617,6 +528,7 @@ public class DownloadManager
      */
     public class JDMActionListener implements ActionListener
     {
+
         @Override
         public void actionPerformed(ActionEvent e)
         {
@@ -641,6 +553,8 @@ public class DownloadManager
             else if (e.getSource().equals(deleteButton))
             {
                 System.out.println("deleteButton");
+                downloadList.actionOnDownload(0);
+
             }
             else if (e.getSource().equals(settingButton))
             {
@@ -682,6 +596,7 @@ public class DownloadManager
             else if (e.getSource().equals(deleteMenuItem))
             {
                 System.out.println("deleteMenuItem");
+                downloadList.actionOnDownload(0);
             }
             else if (e.getSource().equals(settingMenuItem))
             {
@@ -841,5 +756,92 @@ public class DownloadManager
                 System.out.println("Extra Buttons");
             }
         }
+    }
+
+
+
+
+    //These are save methods
+
+    public void save()
+    {
+        saveSetting();
+        saveDownloadList();
+    }
+
+    public void saveDownloadList()
+    {
+        downloadVectorSave = downloadList.getDownloadVector();
+        try (FileOutputStream fileOutputStream = new FileOutputStream("Files/List.jdm"))
+        {
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(downloadVectorSave);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    public void loadDownloadList()
+    {
+        try (FileInputStream fileInputStream = new FileInputStream("Files/List.jdm"))
+        {
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            downloadVectorSave = (Vector<Download>) objectInputStream.readObject();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        downloadList.setDownloadListVector(downloadVectorSave);
+        downloadList.vectorPanelGenerator(downloadList.getDownloadVector());
+        showFrame();
+    }
+
+    public void saveSetting()
+    {
+        settingFile = new SettingFile();
+        settingFile.lookAndFeel = setting.getLookAndFeel();
+        settingFile.maxSimultaneouslyDownload = setting.getMaxSimultaneouslyDownload();
+        settingFile.path = setting.getPath();
+        settingFile.X = frame.getX();
+        settingFile.Y = frame.getY();
+        settingFile.width = frame.getWidth();
+        settingFile.height = frame.getHeight();
+
+        try (FileOutputStream fileOutputStream = new FileOutputStream("Files/Settings.jdm"))
+        {
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+
+            objectOutputStream.writeObject(settingFile);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    public void loadSetting()
+    {
+        settingFile = null;
+        try (FileInputStream fileInputStream = new FileInputStream("Files/Settings.jdm"))
+        {
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            settingFile = (SettingFile) objectInputStream.readObject();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        setting.setMaxSimultaneouslyDownload(settingFile.maxSimultaneouslyDownload);
+        setting.setPath(settingFile.path);
+        setting.setLookAndFeel(settingFile.lookAndFeel);
     }
 }

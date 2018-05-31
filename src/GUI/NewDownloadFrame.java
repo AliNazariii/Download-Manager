@@ -171,7 +171,6 @@ public class NewDownloadFrame extends JFrame
                 if (!checkBox.isSelected())
                 {
                     downloadManager.getDownloadList().addDownload(temp);
-                    downloadManager.showFrame();
                 }
                 else
                 {

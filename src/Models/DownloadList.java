@@ -1,9 +1,12 @@
 package Models;
 
+import GUI.DownloadInfo;
 import GUI.DownloadManager;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Vector;
@@ -12,11 +15,19 @@ import java.util.Vector;
 public class DownloadList
 {
     private static Vector<Download> downloadListVector;
-    private JPanel downloadPanel;
+    private static JPanel downloadPanel;
+    private JScrollPane scrollPane;
+    public static Download selectedDownload;
 
     public DownloadList()
     {
         downloadListVector = new Vector<>();
+        downloadPanel = new JPanel(new GridLayout(20, 1));
+        scrollPane = new JScrollPane(downloadPanel);
+        /*downloadPanel.removeAll();
+        downloadPanel.revalidate();
+        downloadPanel.repaint();*/
+        DownloadManager.getRightSide().add(scrollPane, BorderLayout.CENTER);
     }
 
     public Vector<Download> getDownloadVector()
@@ -27,7 +38,7 @@ public class DownloadList
     public void addDownload(Download input)
     {
         downloadListVector.add(input);
-        vectorPanelGenerator(downloadListVector);
+        panelGenerator(input);
     }
 
     public static void setDownloadListVector(Vector<Download> downloadListVector)
@@ -54,24 +65,26 @@ public class DownloadList
             public void mousePressed(MouseEvent e)
             {
                 System.out.println("download panel clicked");
-                /*for (Download x : downloadList.getDownloadVector())
+                for (Component y : downloadPanel.getComponents())
                 {
-                    x.setBackground(Color.decode("#e7effb"));
-                }*/
-                download.setBackground(Color.decode("#ecbf7e"));
+                    y.setBackground(Color.decode("#e7effb"));
+                }
+                download.setBackground(Color.decode("#C0C0C0"));
+                selectedDownload = x;
             }
-            /*@Override
-            public void mouseEntered(MouseEvent e)
-            {
-                System.out.println("enter download panel");
-                setBackground(Color.decode("#c3c1be"));
-            }
+
             @Override
-            public void mouseExited(MouseEvent e)
+            public void mouseClicked(MouseEvent e)
             {
-                System.out.println("exit download panel");
-                setBackground(Color.decode("#e7effb"));
-            }*/
+                if (e.getButton() == MouseEvent.BUTTON3)
+                {
+                    System.out.println("open download info by right click");
+                    new DownloadInfo(DownloadManager.getFrame(), "Download", x);
+                } else if (e.getClickCount() == 2)
+                {
+                    System.out.println("Open file by double click");
+                }
+            }
         });
 
 
@@ -96,16 +109,45 @@ public class DownloadList
         download.add(centerOfPanel, BorderLayout.CENTER);
 
         downloadPanel.add(download);
+        DownloadManager.showFrame();
+    }
+
+    public JPanel getDownloadPanel()
+    {
+        return downloadPanel;
     }
 
     public void vectorPanelGenerator(Vector<Download> downloadVector)
     {
-        downloadPanel = new JPanel(new GridLayout(20, 1));
         for (Download x : downloadVector)
         {
             panelGenerator(x);
         }
-        DownloadManager.setDownloadPanel(downloadPanel);
         DownloadManager.showFrame();
     }
+
+    public void actionOnDownload(int input)
+    {
+        switch (input)
+        {
+            case 0:
+            {
+                /*System.out.println(downloadListVector.size());
+                downloadListVector.remove(selectedDownload);
+                downloadPanel = new JPanel(new GridLayout(20, 1));
+                scrollPane = new JScrollPane(downloadPanel);
+                vectorPanelGenerator(downloadListVector);
+                System.out.println(downloadListVector.size());
+                //downloadPanel.remove(downloadListVector.indexOf(selectedDownload));
+                DownloadManager.showFrame();*/
+                System.out.println("yes");
+            }
+            case 1:
+            {
+                System.out.println("haah");
+            }
+        }
+    }
+
+
 }
