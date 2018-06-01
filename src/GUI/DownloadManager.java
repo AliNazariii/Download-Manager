@@ -769,12 +769,13 @@ public class DownloadManager
     {
         saveSetting();
         saveDownloadList();
+        saveDeletedDownloads();
         generateZip();
     }
 
     public void generateZip()
     {
-        String[] files = {"Files/List.jdm", "Files/Settings.jdm"};
+        String[] files = {"Files/List.jdm", "Files/Settings.jdm", "Files/DeletedURLs.txt"};
         String zipFile = "Export.zip";
         try
         {
@@ -807,7 +808,6 @@ public class DownloadManager
             e.printStackTrace();
         }
     }
-
     public void saveDownloadList()
     {
         downloadVectorSave = downloadList.getDownloadVector();
@@ -820,6 +820,22 @@ public class DownloadManager
         {
             e.printStackTrace();
         }
+    }
+    public void saveDeletedDownloads()
+    {
+        try (FileWriter writer = new FileWriter("Files/DeletedURLs.txt", true); BufferedWriter buffer = new BufferedWriter(writer))
+        {
+            for (Download x : downloadList.getDeletedDownloadVector())
+            {
+                buffer.newLine();
+                buffer.write(x.getURL());
+                buffer.newLine();
+            }
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
     }
     public void loadDownloadList()
     {

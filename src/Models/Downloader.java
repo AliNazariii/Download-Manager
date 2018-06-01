@@ -36,6 +36,7 @@ public class Downloader extends Thread
         String fileName = url.getFile();
         input.setName(fileName.substring(fileName.lastIndexOf('/') + 1));
     }
+
     public String getFileName(URL url)
     {
         String fileName = url.getFile();
@@ -63,11 +64,11 @@ public class Downloader extends Thread
             }
             connection.connect();
 
-            /*//make sure response code is in the 200 range
-            if (connection.getResponseCode() / 100 != 200)
+            //make sure response code is in the 200 range
+            if (connection.getResponseCode() / 100 != 2)
             {
-                throw new IOException(connection.getResponseCode());
-            }*/
+                throw new IOException(connection.getResponseCode() + "");
+            }
         }
         catch (IOException ex)
         {
@@ -76,7 +77,6 @@ public class Downloader extends Thread
         }
 
         File file = new File(path + "/" + getFileName(url));
-        System.out.println(file.getPath());
         long contentLength = connection.getContentLength();
         System.out.println("Content Length = " + contentLength);
 
