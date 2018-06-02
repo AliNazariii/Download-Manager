@@ -10,7 +10,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        DownloadManager JDM = new DownloadManager("Java Download Manager");
+        DownloadManager JDM = new DownloadManager();
         JDM.showFrame();
     }
 }

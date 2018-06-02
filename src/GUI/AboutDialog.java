@@ -9,8 +9,8 @@ public class AboutDialog extends JDialog {
     private JLabel startDate;
     private JLabel finalDate;
 
-    public AboutDialog(JFrame downloadManagerFrame, String name) {
-        super(downloadManagerFrame, name);
+    public AboutDialog(JFrame downloadManagerFrame) {
+        super(downloadManagerFrame, "About");
         setLayout(new GridLayout(4, 1));
         setSize(350, 200);
         setLocationRelativeTo(null);
@@ -29,10 +29,22 @@ public class AboutDialog extends JDialog {
         startDate = new JLabel("Started project on 12 May 2018", SwingConstants.CENTER);
         startDate.setFont(new Font("Titillium Web", 4, 14));
         add(startDate);
-        finalDate = new JLabel("Finished on 19 May 2018", SwingConstants.CENTER);
+        finalDate = new JLabel("Finished on 3 June 2018", SwingConstants.CENTER);
         finalDate.setFont(new Font("Titillium Web", 4, 14));
         add(finalDate);
+    }
 
+    public void showDialog()
+    {
         setVisible(true);
+    }
+
+    public void farsi()
+    {
+        setName("About");
+        author.setText("کاری از علی نظری");
+        startDate.setText("شروع پروژه از 22 اردیبهشت 97");
+        finalDate.setText("اتمام پروژه در 14 خرداد 97");
+
     }
 }

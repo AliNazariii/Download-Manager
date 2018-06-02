@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38a204c7-e8ac-4cb7-8700-d0d39cc69f99" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Files/List.jdm" afterPath="$PROJECT_DIR$/Files/List.jdm" />
-      <change beforePath="$PROJECT_DIR$/Files/Settings.jdm" afterPath="$PROJECT_DIR$/Files/Settings.jdm" />
-      <change beforePath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager.class" afterPath="$PROJECT_DIR$/out/production/Download Manager_GitLab/GUI/DownloadManager.class" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/DownloadManager.java" afterPath="$PROJECT_DIR$/src/GUI/DownloadManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/Models/DownloadList.java" afterPath="$PROJECT_DIR$/src/Models/DownloadList.java" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Downloader.java" afterPath="$PROJECT_DIR$/src/Models/Downloader.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/Settings.jdm" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Settings.jdm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AboutDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AboutDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/DownloadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/DownloadManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,35 +24,47 @@
       <file leaf-file-name="DownloadManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/DownloadManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="839" column="34" lean-forward="true" selection-start-line="839" selection-start-column="34" selection-end-line="839" selection-end-column="34" />
+            <state relative-caret-position="157">
+              <caret line="103" column="20" lean-forward="true" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#DownloadManager#0;class#DownloadManager#0" expanded="false" />
-                <element signature="e#3128#3129#0" expanded="true" />
-                <element signature="e#3182#3183#0" expanded="true" />
-                <element signature="docComment;method#setMenuBar#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#setMenuBar#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;method#setLeftSide#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#setLeftSide#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;method#setRightSide#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;method#setToolBar#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#setToolBar#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;method#showFrame#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#showFrame#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;method#setSettingFrame#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;method#setAboutDialog#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;method#setNewDownloadFrame#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;method#setUI#0;class#DownloadManager#0" expanded="false" />
-                <element signature="docComment;class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
-                <element signature="class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#generateZip#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#saveDownloadList#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#saveDeletedDownloads#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#loadDownloadList#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#saveSetting#0;class#DownloadManager#0" expanded="false" />
-                <element signature="method#loadSetting#0;class#DownloadManager#0" expanded="false" />
+                <element signature="e#1804#1842#0" />
+                <element signature="e#2730#2749#0" />
+                <element signature="e#2717#3895#0" />
+                <element signature="e#3414#3415#0" expanded="true" />
+                <element signature="e#3468#3469#0" expanded="true" />
+                <element signature="e#2735#3047#0" />
+                <element signature="e#3734#9431#0" />
+                <element signature="e#9437#9725#0" />
+                <element signature="e#9437#12052#0" />
+                <element signature="e#12058#12393#0" />
+                <element signature="e#12058#12794#0" />
+                <element signature="e#12800#12877#0" />
+                <element signature="e#17884#17971#0" />
+                <element signature="e#17884#18115#0" />
+                <element signature="e#18121#18268#0" />
+                <element signature="e#18349#18452#0" />
+                <element signature="e#18554#18619#0" />
+                <element signature="e#18726#18846#0" />
+                <element signature="e#19159#19203#0" />
+                <element signature="e#19159#25574#0" />
+                <element signature="e#25611#25743#0" />
+                <element signature="e#25786#26845#0" />
+                <element signature="e#27223#27706#0" />
+                <element signature="e#26850#27305#0" />
+                <element signature="e#27798#28459#0" />
+                <element signature="e#28465#29256#0" />
+                <element signature="e#29261#29960#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/AboutDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -63,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/src/Models/Download.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="236">
-              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#786#787#0" expanded="true" />
@@ -76,8 +86,8 @@
       <file leaf-file-name="Downloader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Downloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+            <state relative-caret-position="272">
+              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,15 +98,15 @@
       <file leaf-file-name="DownloadList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/DownloadList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+            <state relative-caret-position="1513">
+              <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
               <folding>
-                <element signature="method#DownloadList#0;class#DownloadList#0" expanded="false" />
-                <element signature="method#addDownload#0;class#DownloadList#0" expanded="false" />
-                <element signature="method#setDownloadListVector#0;class#DownloadList#0" expanded="false" />
-                <element signature="method#vectorPanelGenerator#0;class#DownloadList#0" expanded="false" />
-                <element signature="method#actionOnDownload#0;class#DownloadList#0" expanded="false" />
-                <element signature="method#updatePanel#0;class#DownloadList#0" expanded="false" />
+                <element signature="method#DownloadList#0;class#DownloadList#0" />
+                <element signature="method#addDownload#0;class#DownloadList#0" />
+                <element signature="method#setDownloadListVector#0;class#DownloadList#0" />
+                <element signature="method#vectorPanelGenerator#0;class#DownloadList#0" />
+                <element signature="method#actionOnDownload#0;class#DownloadList#0" />
+                <element signature="method#updatePanel#0;class#DownloadList#0" />
               </folding>
             </state>
           </provider>
@@ -106,8 +116,7 @@
         <entry file="file://$PROJECT_DIR$/src/GUI/DownloadInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="93" column="52" lean-forward="false" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
-              <folding />
+              <caret line="93" column="52" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -115,18 +124,18 @@
       <file leaf-file-name="NewDownloadFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/NewDownloadFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+            <state relative-caret-position="1207">
+              <caret line="169" selection-start-line="169" selection-end-line="169" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#NewDownloadFrame#0;class#NewDownloadFrame#0" expanded="false" />
-                <element signature="method#setURL#0;class#NewDownloadFrame#0" expanded="false" />
-                <element signature="method#setPath#0;class#NewDownloadFrame#0" expanded="false" />
-                <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" expanded="false" />
-                <element signature="method#setQueueOrNot#0;class#NewDownloadFrame#0" expanded="false" />
-                <element signature="method#setDownPanel#0;class#NewDownloadFrame#0" expanded="false" />
-                <element signature="docComment;method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
-                <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
+                <element signature="method#NewDownloadFrame#0;class#NewDownloadFrame#0" />
+                <element signature="method#setURL#0;class#NewDownloadFrame#0" />
+                <element signature="method#setPath#0;class#NewDownloadFrame#0" />
+                <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" />
+                <element signature="method#setQueueOrNot#0;class#NewDownloadFrame#0" />
+                <element signature="method#setDownPanel#0;class#NewDownloadFrame#0" />
+                <element signature="docComment;method#showFrame#0;class#NewDownloadFrame#0" />
+                <element signature="method#showFrame#0;class#NewDownloadFrame#0" />
               </folding>
             </state>
           </provider>
@@ -169,11 +178,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -194,9 +198,7 @@
         <option value="$PROJECT_DIR$/src/DownloadList.java" />
         <option value="$PROJECT_DIR$/src/Setting.java" />
         <option value="$PROJECT_DIR$/src/DownloadManager.java" />
-        <option value="$PROJECT_DIR$/src/GUI/AboutDialog.java" />
         <option value="$PROJECT_DIR$/src/GUI/QueueFrame.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GUI/Setting.java" />
         <option value="$PROJECT_DIR$/src/Files/SettingFile.java" />
         <option value="$PROJECT_DIR$/src/Models/DownloadListGenerator.java" />
@@ -207,6 +209,8 @@
         <option value="$PROJECT_DIR$/src/Models/Downloader.java" />
         <option value="$PROJECT_DIR$/src/Models/Download.java" />
         <option value="$PROJECT_DIR$/src/Models/DownloadList.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/GUI/AboutDialog.java" />
         <option value="$PROJECT_DIR$/src/GUI/DownloadManager.java" />
       </list>
     </option>
@@ -217,9 +221,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="683" />
-    <option name="height" value="738" />
+    <option name="x" value="1280" />
+    <option name="y" value="-28" />
+    <option name="width" value="685" />
+    <option name="height" value="740" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -257,48 +266,40 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Download Manager_GitLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Download Manager_GitLab" type="462c0819:PsiDirectoryNode" />
+              <item name="Java-Download-Manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Download-Manager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Download Manager_GitLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Download Manager_GitLab" type="462c0819:PsiDirectoryNode" />
+              <item name="Java-Download-Manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Download-Manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Download Manager_GitLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Download Manager_GitLab" type="462c0819:PsiDirectoryNode" />
+              <item name="Java-Download-Manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Download-Manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Download Manager_GitLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Download Manager_GitLab" type="462c0819:PsiDirectoryNode" />
+              <item name="Java-Download-Manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Download-Manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Download Manager_GitLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Download Manager_GitLab" type="462c0819:PsiDirectoryNode" />
+              <item name="Java-Download-Manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Download-Manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -306,21 +307,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="png&#9;FILE&#9;file://F:/AP/HW/Download Manager_GitLab/src/Icons/batchDownloadIcon.png" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Other/AP101-master/AP101-master/src/main/java/home/Seyed/JDM" />
-    <property name="SearchEverywhereHistoryKey" value="png&#9;FILE&#9;file://F:/AP/HW/Download Manager_GitLab/src/Icons/batchDownloadIcon.png" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -336,43 +334,17 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
     </configuration>
     <configuration name="Run_Main" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Download Manager_GitLab" />
-      <envs />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -382,24 +354,13 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <envs />
       <patterns />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -412,27 +373,15 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -461,6 +410,7 @@
       <workItem from="1527413573863" duration="8746000" />
       <workItem from="1527494302966" duration="1195000" />
       <workItem from="1527616906950" duration="77604000" />
+      <workItem from="1527971009754" duration="4652000" />
     </task>
     <task id="LOCAL-00001" summary="move panelGenerator but now adding new download show on the next run :(">
       <created>1527761763557</created>
@@ -487,7 +437,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246773000" />
+    <option name="totallyTimeSpent" value="251425000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -499,38 +449,70 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27925116" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27925116" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1749634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3978159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32917318" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32761312" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5058565" side_tool="true" weight="0.27925116" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32917318" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4941435" visible="true" weight="0.27823693" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17501627" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3978159" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.329429" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24963397" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24963397" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.329429" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4941435" visible="true" weight="0.27823693" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.34895834" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32917318" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3978159" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5058565" side_tool="true" weight="0.27925116" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32917318" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32761312" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -548,59 +530,51 @@
     <breakpoint-manager>
       <option name="time" value="25" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/NewDownloadButton.png" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/text/DefaultStyledDocument.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-101">
-          <caret line="94" column="11" lean-forward="false" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
+          <caret line="94" column="11" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/JOptionPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1327">
-          <caret line="312" column="13" lean-forward="false" selection-start-line="312" selection-start-column="13" selection-end-line="312" selection-end-column="13" />
+          <caret line="312" column="13" selection-start-line="312" selection-start-column="13" selection-end-line="312" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/JDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-460">
-          <caret line="97" column="13" lean-forward="false" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+          <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/event/KeyListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
-          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AboutFrame.java" />
     <entry file="file://$PROJECT_DIR$/src/Icons/batchDownloadIcon.png" />
-    <entry file="file://$PROJECT_DIR$/src/AboutDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AboutDialog.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="44" column="46" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/event/KeyAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
-          <caret line="67" column="27" lean-forward="false" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="27" />
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -609,122 +583,67 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/plaf/basic/BasicFileChooserUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="588" column="20" lean-forward="false" selection-start-line="588" selection-start-column="20" selection-end-line="588" selection-end-column="20" />
+          <caret line="588" column="20" selection-start-line="588" selection-start-column="20" selection-end-line="588" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/EventListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/text/DefaultCaret.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-314">
-          <caret line="402" column="26" lean-forward="false" selection-start-line="402" selection-start-column="26" selection-end-line="402" selection-end-column="26" />
+          <caret line="402" column="26" selection-start-line="402" selection-start-column="26" selection-end-line="402" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/event/MouseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
-          <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/inProgressDownloads.java" />
-    <entry file="file://$PROJECT_DIR$/src/QueueFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DownloadInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="34" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="23" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Lab/iNote/Java-Lab-9/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewDownloadFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="174" column="54" lean-forward="false" selection-start-line="172" selection-start-column="16" selection-end-line="174" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QueueFrame.java" />
+    <entry file="file://$PROJECT_DIR$/src/DownloadInfo.java" />
+    <entry file="file://$PROJECT_DIR$/../../Lab/iNote/Java-Lab-9/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/NewDownloadFrame.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
-          <caret line="347" column="0" lean-forward="false" selection-start-line="347" selection-start-column="0" selection-end-line="347" selection-end-column="0" />
-          <folding />
+          <caret line="347" selection-start-line="347" selection-end-line="347" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
-          <folding />
+          <caret line="251" selection-start-line="251" selection-end-line="251" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="7" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/FileUtils.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/ObjectOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="1183" column="0" lean-forward="false" selection-start-line="1183" selection-start-column="0" selection-end-line="1183" selection-end-column="0" />
-          <folding />
+          <caret line="1183" selection-start-line="1183" selection-end-line="1183" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-          <folding />
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Setting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="201" column="41" lean-forward="false" selection-start-line="201" selection-start-column="41" selection-end-line="201" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DownloadManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="771" column="0" lean-forward="false" selection-start-line="771" selection-start-column="0" selection-end-line="771" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Setting.java" />
+    <entry file="file://$PROJECT_DIR$/src/DownloadManager.java" />
     <entry file="uml://JAVA/">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -757,11 +676,11 @@
             <node x="" y="">groovyjarjarcommonscli</node>
             <node x="" y="">groovyjarjarantlr</node>
             <node x="" y="">Main</node>
-            <node x="" y="">New folder</node>
+            <node x="" y="" />
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.239625585023401" x="281.0" y="155.37251447269065" />
+          <settings layout="Hierarchic Group" zoom="1.239625585023401" x="281.0" y="155.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -769,91 +688,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/AboutDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/QueueFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Download.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="20" column="78" lean-forward="false" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DownloadList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Download.java" />
+    <entry file="file://$PROJECT_DIR$/src/DownloadList.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/Serializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="168" column="31" lean-forward="true" selection-start-line="168" selection-start-column="31" selection-end-line="168" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="75" lean-forward="false" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1">
-          <caret line="130" column="13" lean-forward="false" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-          <folding />
+          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/JProgressBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
-          <caret line="131" column="13" lean-forward="false" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
-          <folding />
+          <caret line="131" column="13" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/DownloadListGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/DownloadListGenerator.java" />
     <entry file="file://$PROJECT_DIR$/src/GUI/Setting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <element signature="method#Setting#0;class#Setting#0" expanded="false" />
-            <element signature="method#setMaxSimultaneouslyDownload#0;class#Setting#0" expanded="false" />
-            <element signature="method#setPathPanel#0;class#Setting#0" expanded="false" />
-            <element signature="method#lookAndFeel#0;class#Setting#0" expanded="false" />
-            <element signature="method#buttons#0;class#Setting#0" expanded="false" />
-            <element signature="method#setFileChooser#0;class#Setting#0" expanded="false" />
-            <element signature="class#SettingActionListener#0;class#Setting#0" expanded="false" />
-            <element signature="method#showFrame#0;class#Setting#0" expanded="false" />
+            <element signature="method#Setting#0;class#Setting#0" />
+            <element signature="method#setMaxSimultaneouslyDownload#0;class#Setting#0" />
+            <element signature="method#setPathPanel#0;class#Setting#0" />
+            <element signature="method#lookAndFeel#0;class#Setting#0" />
+            <element signature="method#buttons#0;class#Setting#0" />
+            <element signature="method#setFileChooser#0;class#Setting#0" />
+            <element signature="class#SettingActionListener#0;class#Setting#0" />
+            <element signature="method#showFrame#0;class#Setting#0" />
           </folding>
         </state>
       </provider>
@@ -861,16 +739,14 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="82" column="13" lean-forward="false" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
-          <folding />
+          <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Files/SettingFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -878,40 +754,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
           <caret line="73" column="45" lean-forward="true" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/DownloadInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="93" column="52" lean-forward="false" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/objects/NativeError.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="137" column="25" lean-forward="false" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
-          <folding />
+          <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/NewDownloadFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+        <state relative-caret-position="1207">
+          <caret line="169" selection-start-line="169" selection-end-line="169" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#NewDownloadFrame#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#setURL#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#setPath#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#setQueueOrNot#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#setDownPanel#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="docComment;method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
-            <element signature="method#showFrame#0;class#NewDownloadFrame#0" expanded="false" />
+            <element signature="method#NewDownloadFrame#0;class#NewDownloadFrame#0" />
+            <element signature="method#setURL#0;class#NewDownloadFrame#0" />
+            <element signature="method#setPath#0;class#NewDownloadFrame#0" />
+            <element signature="method#setFileChooserHttp#0;class#NewDownloadFrame#0" />
+            <element signature="method#setQueueOrNot#0;class#NewDownloadFrame#0" />
+            <element signature="method#setDownPanel#0;class#NewDownloadFrame#0" />
+            <element signature="docComment;method#showFrame#0;class#NewDownloadFrame#0" />
+            <element signature="method#showFrame#0;class#NewDownloadFrame#0" />
           </folding>
         </state>
       </provider>
@@ -919,8 +785,7 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/net/MalformedURLException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding />
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -928,14 +793,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="280" column="55" lean-forward="true" selection-start-line="280" selection-start-column="55" selection-end-line="280" selection-end-column="55" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/DownloadList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+          <folding>
+            <element signature="method#DownloadList#0;class#DownloadList#0" />
+            <element signature="method#addDownload#0;class#DownloadList#0" />
+            <element signature="method#setDownloadListVector#0;class#DownloadList#0" />
+            <element signature="method#vectorPanelGenerator#0;class#DownloadList#0" />
+            <element signature="method#actionOnDownload#0;class#DownloadList#0" />
+            <element signature="method#updatePanel#0;class#DownloadList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/DownloadInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="93" column="52" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Downloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Download.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
-          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#786#787#0" expanded="true" />
@@ -944,61 +847,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/DownloadList.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/AboutDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
-          <folding>
-            <element signature="method#DownloadList#0;class#DownloadList#0" expanded="false" />
-            <element signature="method#addDownload#0;class#DownloadList#0" expanded="false" />
-            <element signature="method#setDownloadListVector#0;class#DownloadList#0" expanded="false" />
-            <element signature="method#vectorPanelGenerator#0;class#DownloadList#0" expanded="false" />
-            <element signature="method#actionOnDownload#0;class#DownloadList#0" expanded="false" />
-            <element signature="method#updatePanel#0;class#DownloadList#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Downloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/DownloadManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="839" column="34" lean-forward="true" selection-start-line="839" selection-start-column="34" selection-end-line="839" selection-end-column="34" />
+        <state relative-caret-position="157">
+          <caret line="103" column="20" lean-forward="true" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#DownloadManager#0;class#DownloadManager#0" expanded="false" />
-            <element signature="e#3128#3129#0" expanded="true" />
-            <element signature="e#3182#3183#0" expanded="true" />
-            <element signature="docComment;method#setMenuBar#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#setMenuBar#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;method#setLeftSide#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#setLeftSide#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;method#setRightSide#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;method#setToolBar#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#setToolBar#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;method#showFrame#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#showFrame#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;method#setSettingFrame#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;method#setAboutDialog#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;method#setNewDownloadFrame#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;method#setUI#0;class#DownloadManager#0" expanded="false" />
-            <element signature="docComment;class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
-            <element signature="class#JDMActionListener#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#generateZip#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#saveDownloadList#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#saveDeletedDownloads#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#loadDownloadList#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#saveSetting#0;class#DownloadManager#0" expanded="false" />
-            <element signature="method#loadSetting#0;class#DownloadManager#0" expanded="false" />
+            <element signature="e#1804#1842#0" />
+            <element signature="e#2730#2749#0" />
+            <element signature="e#2717#3895#0" />
+            <element signature="e#3414#3415#0" expanded="true" />
+            <element signature="e#3468#3469#0" expanded="true" />
+            <element signature="e#2735#3047#0" />
+            <element signature="e#3734#9431#0" />
+            <element signature="e#9437#9725#0" />
+            <element signature="e#9437#12052#0" />
+            <element signature="e#12058#12393#0" />
+            <element signature="e#12058#12794#0" />
+            <element signature="e#12800#12877#0" />
+            <element signature="e#17884#17971#0" />
+            <element signature="e#17884#18115#0" />
+            <element signature="e#18121#18268#0" />
+            <element signature="e#18349#18452#0" />
+            <element signature="e#18554#18619#0" />
+            <element signature="e#18726#18846#0" />
+            <element signature="e#19159#19203#0" />
+            <element signature="e#19159#25574#0" />
+            <element signature="e#25611#25743#0" />
+            <element signature="e#25786#26845#0" />
+            <element signature="e#27223#27706#0" />
+            <element signature="e#26850#27305#0" />
+            <element signature="e#27798#28459#0" />
+            <element signature="e#28465#29256#0" />
+            <element signature="e#29261#29960#0" />
           </folding>
         </state>
       </provider>

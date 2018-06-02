@@ -14,9 +14,12 @@ import java.util.zip.ZipOutputStream;
 /**
  * This is the Main Frame of the download manager that will be shown...
  */
-public class DownloadManager
-{
+public class DownloadManager {
     private static JFrame frame;
+
+    TrayIcon icon;
+    MenuItem openItem;
+    MenuItem closeItem;
 
     private JMenuBar menuBar;
     private JMenu helpMenu;
@@ -59,7 +62,6 @@ public class DownloadManager
     private Vector<Download> downloadVectorSave;  //I serialize this vector
 
 
-
     private JPanel leftSide;
 
     private JPanel downloadManagerLogo;
@@ -71,11 +73,12 @@ public class DownloadManager
     private JPanel myLogo;
 
 
-    public DownloadManager(String name)
-    {
+    /**
+     * This is the constructor of the main JDM frame
+     */
+    public DownloadManager() {
         loadSetting();
-        try
-        {
+        try {
             UIManager.setLookAndFeel(settingFile.lookAndFeel);
         } catch (ClassNotFoundException e1) {
             e1.printStackTrace();
@@ -87,22 +90,32 @@ public class DownloadManager
             e1.printStackTrace();
         }
 
-        frame = new JFrame(name);
+        frame = new JFrame("Java Download Manager");
         frame.setSize(settingFile.width, settingFile.height);
         //frame.setLocationRelativeTo(null);
         frame.setLocation(settingFile.X, settingFile.Y);
         frame.getContentPane().setLayout(new BorderLayout());
 
+        setTray();
         setMenuBar();
         setLeftSide();
         setRightSide();
+        farsi();
+        showFrame();
+    }
 
+    /**
+     * This method generates the popup menu
+     * and also set the close button not to exit the program and bring it to the system tray.
+     */
+    public void setTray()
+    {
         SystemTray systemTray = SystemTray.getSystemTray();
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Image image = toolkit.getImage(getClass().getResource("/Icons/eagleIcon.png"));
         PopupMenu popupMenu = new PopupMenu();
-        TrayIcon icon = new TrayIcon(image, "JDM", popupMenu);
-        MenuItem openItem = new MenuItem("Open JDM");
+        icon = new TrayIcon(image, "JDM", popupMenu);
+        openItem = new MenuItem("Open JDM");
         openItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -111,7 +124,7 @@ public class DownloadManager
         });
         popupMenu.add(openItem);
 
-        MenuItem closeItem = new MenuItem("Close JDM");
+        closeItem = new MenuItem("Close JDM");
         closeItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -121,9 +134,12 @@ public class DownloadManager
         });
         popupMenu.add(closeItem);
         icon.setImageAutoSize(true);
-        try {
+        try
+        {
             systemTray.add(icon);
-        } catch (AWTException e) {
+        }
+        catch (AWTException e)
+        {
             e.printStackTrace();
         }
     }
@@ -136,8 +152,7 @@ public class DownloadManager
      * and will set all of their configurations
      * This is the JMenuBar of the Frame.
      */
-    public void setMenuBar()
-    {
+    public void setMenuBar() {
         //Here I created the menu bar
         menuBar = new JMenuBar();
 
@@ -216,6 +231,7 @@ public class DownloadManager
         helpMenu = new JMenu("Help");
         helpMenu.setMnemonic(KeyEvent.VK_H);
 
+        aboutDialog = new AboutDialog(frame);
         aboutMenuItem = new JMenuItem("About", KeyEvent.VK_A);
         aboutMenuItem.setToolTipText("About");
         KeyStroke aboutMenu = KeyStroke.getKeyStroke("alt A");
@@ -272,8 +288,7 @@ public class DownloadManager
      * Layout Manager = Border layout
      * This is the West of the Main Frame.
      */
-    public void setLeftSide()
-    {
+    public void setLeftSide() {
         //here I created the panel and set it's color
         leftSide = new JPanel(new BorderLayout());
         leftSide.setBackground(Color.decode("#32363f"));
@@ -302,14 +317,13 @@ public class DownloadManager
         queueButton.setFocusable(false);
         queueButton.addActionListener(new JDMActionListener());
 
-        leftToolBar.add(Box.createRigidArea(new Dimension(0,20)));
+        leftToolBar.add(Box.createRigidArea(new Dimension(0, 20)));
         leftToolBar.add(new JSeparator(SwingConstants.HORIZONTAL));
         leftToolBar.add(queueButton);
         leftToolBar.add(new JSeparator(SwingConstants.HORIZONTAL));
-        leftToolBar.add(Box.createRigidArea(new Dimension(0,300)));
+        leftToolBar.add(Box.createRigidArea(new Dimension(0, 300)));
 
         leftSide.add(leftToolBar, BorderLayout.CENTER);
-
 
 
         //create the author's panel to add to the left panel
@@ -334,8 +348,7 @@ public class DownloadManager
      * The buttons are in a JToolBar that placed at the NORTH of the panel.
      * and the list of the downloads placed at the CENTER of the panel.
      */
-    public void setRightSide()
-    {
+    public void setRightSide() {
         //create the right panel and set color
         rightSide = new JPanel(new BorderLayout());
         rightSide.setBackground(Color.decode("#e7effb"));
@@ -352,8 +365,7 @@ public class DownloadManager
     /**
      * This method do the ToolBar part of the setRightSide method
      */
-    public void setToolBar()
-    {
+    public void setToolBar() {
         //create the toolbar of the buttons and avoid being floating
         toolBar = new JToolBar();
         toolBar.setFloatable(false);
@@ -416,49 +428,50 @@ public class DownloadManager
         settingButton.addActionListener(new JDMActionListener());
 
         //textfield for filtering files by searching words and other features
-        filterFilesTextField = new JTextField("Filter files...");
+        filterFilesTextField = new JTextField("                                       ");
+        filterFilesTextField.setToolTipText("Search");
         filterFilesTextField.setForeground(new Color(166, 166, 166));
         filterFilesTextField.setOpaque(false);
         filterFilesTextField.addActionListener(new JDMActionListener());
 
         //add the buttons to their tool bar and set the spaces and separators
-        toolBar.add(Box.createRigidArea(new Dimension(20,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(20, 0)));
         toolBar.add(newDownloadButton);
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
 
         toolBar.add(new JSeparator(SwingConstants.VERTICAL));
 
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
         toolBar.add(resumeButton);
 
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
         toolBar.add(pauseButton);
 
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
         toolBar.add(cancelButton);
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
 
         toolBar.add(new JSeparator(SwingConstants.VERTICAL));
 
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
         toolBar.add(sortButton);
 
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
         toolBar.add(new JSeparator(SwingConstants.VERTICAL));
 
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
         toolBar.add(deleteButton);
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
 
         toolBar.add(new JSeparator(SwingConstants.VERTICAL));
 
-        toolBar.add(Box.createRigidArea(new Dimension(10,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(10, 0)));
 
         toolBar.add(settingButton);
 
-        toolBar.add(Box.createRigidArea(new Dimension(30,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(30, 0)));
         toolBar.add(filterFilesTextField);
-        toolBar.add(Box.createRigidArea(new Dimension(1,0)));
+        toolBar.add(Box.createRigidArea(new Dimension(1, 0)));
 
         //add the toolBar to the NORTH of the right panel
         rightSide.add(toolBar, BorderLayout.NORTH);
@@ -489,16 +502,15 @@ public class DownloadManager
      * This method will create the About Frame
      * contains author's name, id, date, ...
      */
-    public void setAboutDialog()
+    public void showAboutDialog()
     {
-        aboutDialog = new AboutDialog(frame, "About");
+        aboutDialog.showDialog();
     }
 
     /**
      * This method will create the New Download Frame
      */
-    public void setNewDownloadFrame()
-    {
+    public void setNewDownloadFrame() {
         newDownloadFrame = new NewDownloadFrame(this);
     }
 
@@ -511,266 +523,217 @@ public class DownloadManager
         SwingUtilities.updateComponentTreeUI(frame);
     }
 
-    public DownloadList getDownloadList()
-    {
+    public DownloadList getDownloadList() {
         return downloadList;
     }
-    public static JPanel getRightSide()
-    {
+    public static JPanel getRightSide() {
         return rightSide;
     }
-
-    public static JFrame getFrame()
-    {
+    public static JFrame getFrame() {
         return frame;
     }
 
     /**
      * I handle the actions here
      */
-    public class JDMActionListener implements ActionListener
-    {
+    public class JDMActionListener implements ActionListener {
 
         @Override
-        public void actionPerformed(ActionEvent e)
-        {
+        public void actionPerformed(ActionEvent e) {
             //toolbar buttons
-            if (e.getSource().equals(newDownloadButton))
-            {
+            if (e.getSource().equals(newDownloadButton)) {
                 System.out.println("newDownloadButton");
                 setNewDownloadFrame();
-            }
-            else if (e.getSource().equals(resumeButton))
-            {
+            } else if (e.getSource().equals(resumeButton)) {
                 System.out.println("resumeButton");
-            }
-            else if (e.getSource().equals(pauseButton))
-            {
+            } else if (e.getSource().equals(pauseButton)) {
                 System.out.println("pauseButton");
-            }
-            else if (e.getSource().equals(cancelButton))
-            {
+            } else if (e.getSource().equals(cancelButton)) {
                 System.out.println("cancelButton");
-            }
-            else if (e.getSource().equals(deleteButton))
-            {
+            } else if (e.getSource().equals(deleteButton)) {
                 System.out.println("deleteButton");
                 downloadList.actionOnDownload(0);
 
-            }
-            else if (e.getSource().equals(settingButton))
-            {
+            } else if (e.getSource().equals(settingButton)) {
                 System.out.println("settingButton");
                 setSettingFrame();
-            }
-            else if (e.getSource().equals(filterFilesTextField))
-            {
+            } else if (e.getSource().equals(filterFilesTextField)) {
                 System.out.println(filterFilesTextField.getText());
             }
 
 
             //left toolbar Queue
-            if (e.getSource().equals(queueButton))
-            {
+            if (e.getSource().equals(queueButton)) {
                 System.out.println("queueButton");
                 //callDownloadQueue();
             }
 
 
             //for the menuItems
-            else if (e.getSource().equals(newDownloadMenuItem))
-            {
+            else if (e.getSource().equals(newDownloadMenuItem)) {
                 System.out.println("newDownloadMenuItem");
                 setNewDownloadFrame();
-            }
-            else if (e.getSource().equals(resumeMenuItem))
-            {
+            } else if (e.getSource().equals(resumeMenuItem)) {
                 System.out.println("resumeMenuItem");
-            }
-            else if (e.getSource().equals(pauseMenuItem))
-            {
+            } else if (e.getSource().equals(pauseMenuItem)) {
                 System.out.println("pauseMenuItem");
-            }
-            else if (e.getSource().equals(cancelMenuItem))
-            {
+            } else if (e.getSource().equals(cancelMenuItem)) {
                 System.out.println("cancelMenuItem");
-            }
-            else if (e.getSource().equals(deleteMenuItem))
-            {
+            } else if (e.getSource().equals(deleteMenuItem)) {
                 System.out.println("deleteMenuItem");
                 downloadList.actionOnDownload(0);
-            }
-            else if (e.getSource().equals(settingMenuItem))
-            {
+            } else if (e.getSource().equals(settingMenuItem)) {
                 System.out.println("settingMenuItem");
                 setSettingFrame();
-            }
-            else if (e.getSource().equals(exitMenuItem))
-            {
+            } else if (e.getSource().equals(exitMenuItem)) {
                 System.out.println("exitMenuItem");
                 save();
                 System.exit(0);
-            }
-            else if (e.getSource().equals(aboutMenuItem))
-            {
+            } else if (e.getSource().equals(aboutMenuItem)) {
                 System.out.println("aboutMenuItem");
-                setAboutDialog();
+                showAboutDialog();
             }
 
 
             //Listener of the Metal
-            else if (e.getSource().equals(metalLF))
-            {
+            else if (e.getSource().equals(metalLF)) {
                 System.out.println("Metal Look&Feel");
-                try
-                {
+                try {
                     UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
                     setUI();
-                }
-                catch (ClassNotFoundException e1)
-                {
+                } catch (ClassNotFoundException e1) {
                     e1.printStackTrace();
-                }
-                catch (InstantiationException e1)
-                {
+                } catch (InstantiationException e1) {
                     e1.printStackTrace();
-                }
-                catch (IllegalAccessException e1)
-                {
+                } catch (IllegalAccessException e1) {
                     e1.printStackTrace();
-                }
-                catch (UnsupportedLookAndFeelException e1)
-                {
+                } catch (UnsupportedLookAndFeelException e1) {
                     e1.printStackTrace();
                 }
                 showFrame();
             }
             //Listener of the Nimbus
-            else if (e.getSource().equals(nimbusLF))
-            {
+            else if (e.getSource().equals(nimbusLF)) {
                 System.out.println("Nimbus Motif");
-                try
-                {
+                try {
                     UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
                     setUI();
-                }
-                catch (ClassNotFoundException e1)
-                {
+                } catch (ClassNotFoundException e1) {
                     e1.printStackTrace();
-                }
-                catch (InstantiationException e1)
-                {
+                } catch (InstantiationException e1) {
                     e1.printStackTrace();
-                }
-                catch (IllegalAccessException e1)
-                {
+                } catch (IllegalAccessException e1) {
                     e1.printStackTrace();
-                }
-                catch (UnsupportedLookAndFeelException e1)
-                {
+                } catch (UnsupportedLookAndFeelException e1) {
                     e1.printStackTrace();
                 }
                 showFrame();
             }
             //Listener of the Motif
-            else if (e.getSource().equals(CdeLF))
-            {
+            else if (e.getSource().equals(CdeLF)) {
                 System.out.println("Motif Look&Feel");
-                try
-                {
+                try {
                     UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
                     setUI();
-                }
-                catch (ClassNotFoundException e1)
-                {
+                } catch (ClassNotFoundException e1) {
                     e1.printStackTrace();
-                }
-                catch (InstantiationException e1)
-                {
+                } catch (InstantiationException e1) {
                     e1.printStackTrace();
-                }
-                catch (IllegalAccessException e1)
-                {
+                } catch (IllegalAccessException e1) {
                     e1.printStackTrace();
-                }
-                catch (UnsupportedLookAndFeelException e1)
-                {
+                } catch (UnsupportedLookAndFeelException e1) {
                     e1.printStackTrace();
                 }
                 showFrame();
             }
             //Listener of the Windows
-            else if (e.getSource().equals(windowsLF))
-            {
+            else if (e.getSource().equals(windowsLF)) {
                 System.out.println("Windows Look&Feel");
-                try
-                {
+                try {
                     UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
                     setUI();
-                }
-                catch (ClassNotFoundException e1)
-                {
+                } catch (ClassNotFoundException e1) {
                     e1.printStackTrace();
-                }
-                catch (InstantiationException e1)
-                {
+                } catch (InstantiationException e1) {
                     e1.printStackTrace();
-                }
-                catch (IllegalAccessException e1)
-                {
+                } catch (IllegalAccessException e1) {
                     e1.printStackTrace();
-                }
-                catch (UnsupportedLookAndFeelException e1)
-                {
+                } catch (UnsupportedLookAndFeelException e1) {
                     e1.printStackTrace();
                 }
                 showFrame();
             }
             //Listener of the Windows Classic
-            else if (e.getSource().equals(windowsClassicLF))
-            {
+            else if (e.getSource().equals(windowsClassicLF)) {
                 System.out.println("windows Classic Look&Feel");
-                try
-                {
+                try {
                     UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
                     setUI();
-                }
-                catch (ClassNotFoundException e1)
-                {
+                } catch (ClassNotFoundException e1) {
                     e1.printStackTrace();
-                }
-                catch (InstantiationException e1)
-                {
+                } catch (InstantiationException e1) {
                     e1.printStackTrace();
-                }
-                catch (IllegalAccessException e1)
-                {
+                } catch (IllegalAccessException e1) {
                     e1.printStackTrace();
-                }
-                catch (UnsupportedLookAndFeelException e1)
-                {
+                } catch (UnsupportedLookAndFeelException e1) {
                     e1.printStackTrace();
                 }
                 showFrame();
-            }
-            else
-            {
+            } else {
                 System.out.println("Extra Buttons");
             }
         }
     }
 
 
-
-
     //These are save methods
 
-    public void save()
-    {
+    public void save() {
         saveSetting();
         saveDownloadList();
         saveDeletedDownloads();
         generateZip();
+    }
+
+    public void farsi()
+    {
+        frame.setName("دانلود منیجر جاوا");
+        icon.setToolTip("دانلود منیجر جاوا");
+        openItem.setLabel("باز کردن");
+        closeItem.setLabel("بستن");
+        downloadMenu.setText("دانلود");
+        downloadMenu.setToolTipText("دانلود");
+        newDownloadMenuItem.setText("دانلود جدید");
+        newDownloadMenuItem.setToolTipText("دانلود جدید");
+        resumeMenuItem.setText("ادامه");
+        resumeMenuItem.setToolTipText("ادامه");
+        pauseMenuItem.setText("توقف");
+        pauseMenuItem.setToolTipText("توقف");
+        cancelMenuItem.setText("انصراف");
+        cancelMenuItem.setToolTipText("انصراف");
+        deleteMenuItem.setText("حذف");
+        deleteMenuItem.setToolTipText("حذف");
+        settingMenuItem.setText("تنظیمات");
+        settingMenuItem.setToolTipText("تنظیمات");
+        exitMenuItem.setText("بستن");
+        exitMenuItem.setToolTipText("بستن");
+        helpMenu.setText("راهنما");
+        helpMenu.setToolTipText("راهنما");
+        aboutMenuItem.setText("درباره ما");
+        aboutMenuItem.setToolTipText("درباره ما");
+        lookAndFeel.setText("رابط کاربری");
+        lookAndFeel.setToolTipText("رابط کاربری");
+        queueButton.setText("صف");
+        newDownloadButton.setToolTipText("دانلود جدید");
+        pauseButton.setToolTipText("توقف");
+        resumeButton.setToolTipText("ادامه");
+        cancelButton.setToolTipText("انصراف");
+        sortButton.setToolTipText("مرتب سازی");
+        deleteButton.setToolTipText("پاک کردن دانلود");
+        settingButton.setToolTipText("تنظیمات");
+        filterFilesTextField.setToolTipText("جستجو");
+        aboutDialog.setName("درباره ما");
+        aboutDialog.farsi();
     }
 
     public void generateZip()
@@ -808,19 +771,7 @@ public class DownloadManager
             e.printStackTrace();
         }
     }
-    public void saveDownloadList()
-    {
-        downloadVectorSave = downloadList.getDownloadVector();
-        try (FileOutputStream fileOutputStream = new FileOutputStream("Files/List.jdm"))
-        {
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(downloadVectorSave);
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
+
     public void saveDeletedDownloads()
     {
         try (FileWriter writer = new FileWriter("Files/DeletedURLs.txt", true); BufferedWriter buffer = new BufferedWriter(writer))
@@ -836,6 +787,20 @@ public class DownloadManager
             e.printStackTrace();
         }
 
+    }
+
+    public void saveDownloadList()
+    {
+        downloadVectorSave = downloadList.getDownloadVector();
+        try (FileOutputStream fileOutputStream = new FileOutputStream("Files/List.jdm"))
+        {
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(downloadVectorSave);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
     public void loadDownloadList()
     {
