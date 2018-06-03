@@ -38,7 +38,7 @@ public class NewDownloadFrame extends JFrame
     {
 
         super("New Download");
-        setSize(500, 250);
+        setSize(700, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(NewDownloadFrame.HIDE_ON_CLOSE);
 

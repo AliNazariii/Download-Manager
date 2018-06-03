@@ -49,7 +49,7 @@ public class Setting
     public Setting()
     {
         frame = new JFrame("Setting");
-        frame.setSize(700, 230);
+        frame.setSize(750, 300);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(frame.HIDE_ON_CLOSE);
 
