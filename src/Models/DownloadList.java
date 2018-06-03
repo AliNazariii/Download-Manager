@@ -36,12 +36,32 @@ public class DownloadList extends JPanel
     {
         return deletedDownloadVector;
     }
+    public Vector<JPanel> getDownloadListPanel()
+    {
+        return downloadListPanel;
+    }
+    public JPanel getSelectedPanel()
+    {
+        return selectedPanel;
+    }
+    public Download getSelectedDownload()
+    {
+        return selectedDownload;
+    }
+    public void setSelectedDownload(Download input)
+    {
+        selectedDownload = input;
+    }
+    public void setSelectedPanel(JPanel input)
+    {
+        selectedPanel = input;
+    }
 
     public void addDownload(Download input)
     {
         //new Downloader(input);
         downloadListVector.add(input);
-        panelGenerator(input);
+        new DownloadPanel(input, this);
     }
 
     public static void setDownloadListVector(Vector<Download> downloadListVector)
@@ -49,7 +69,7 @@ public class DownloadList extends JPanel
         DownloadList.downloadListVector = downloadListVector;
     }
 
-    public void panelGenerator(Download x)
+    /*public void panelGenerator(Download x)
     {
         JPanel download = new JPanel(new BorderLayout());
         download.setBorder(BorderFactory.createEmptyBorder(1, 5, 1, 10));
@@ -77,10 +97,10 @@ public class DownloadList extends JPanel
         progressBar.setForeground(Color.decode("#018f99"));
         centerOfPanel.add(progressBar, BorderLayout.CENTER);
 
-        /*JLabel sizeOfFile = new JLabel(x.getSize());
+        *//*JLabel sizeOfFile = new JLabel(x.getSize());
         sizeOfFile.setFont(new Font("Titillium Web", 4, 12));
         sizeOfFile.setOpaque(false);
-        centerOfPanel.add(sizeOfFile, BorderLayout.SOUTH);*/
+        centerOfPanel.add(sizeOfFile, BorderLayout.SOUTH);*//*
 
         download.add(centerOfPanel, BorderLayout.CENTER);
 
@@ -125,13 +145,13 @@ public class DownloadList extends JPanel
         downloadListPanel.add(download);
         updatePanel();
         DownloadManager.showFrame();
-    }
+    }*/
 
     public void vectorPanelGenerator(Vector<Download> downloadVector)
     {
         for (Download x : downloadVector)
         {
-            panelGenerator(x);
+            new DownloadPanel(x, this);
         }
         DownloadManager.showFrame();
     }

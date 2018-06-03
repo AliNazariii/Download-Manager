@@ -83,7 +83,7 @@ public class NewDownloadFrame extends JFrame
 
         pathLabel = new JLabel("Save to: ");
         pathPanel.add(pathLabel, BorderLayout.WEST);
-        pathField = new JTextField("C:\\Users\\Ali_Z\\Desktop");
+        pathField = new JTextField("C:\\Users\\Ali\\Desktop");
         pathField.setForeground(new Color(89, 89, 89));
         pathPanel.add(pathField, BorderLayout.CENTER);
 

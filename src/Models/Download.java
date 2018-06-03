@@ -6,11 +6,10 @@ import java.net.MalformedURLException;
 public class Download implements Serializable
 {
     private String name;
-    //public JProgressBar progressBar;
     private String size;
-    //private String speed;
     private String URL;
     private String path;
+    private String progress;
     //private Date startLabel;
 
     public Download(String URL, String path)
@@ -19,6 +18,7 @@ public class Download implements Serializable
         this.name = "Download Name";
         this.size = "0";
         this.path = path;
+        this.progress = "0";
     }
 
     public String getName()
@@ -37,9 +37,21 @@ public class Download implements Serializable
     {
         return URL;
     }
+    public String getProgress()
+    {
+        return progress;
+    }
 
     public void setName(String name)
     {
         this.name = name;
+    }
+    public void setProgress(int progress)
+    {
+        this.progress = "" + progress;
+    }
+    public void setSize(String size)
+    {
+        this.size = size;
     }
 }
