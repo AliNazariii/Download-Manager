@@ -23,7 +23,7 @@ public class Downloader extends SwingWorker<Void, Void>
         try
         {
             this.url = new URL(input.getURL());
-            //checkLink();
+            checkLink();
         }
         catch (MalformedURLException e)
         {
@@ -35,7 +35,6 @@ public class Downloader extends SwingWorker<Void, Void>
         setFileName(input);
     }
 
-/*
     public void checkLink()
     {
         HttpURLConnection connection;
@@ -79,7 +78,6 @@ public class Downloader extends SwingWorker<Void, Void>
 
 
     }
-*/
 
     public void setFileName(Download input)
     {
