@@ -16,7 +16,8 @@ public class Setting
 
     private JPanel eastSuperPanel;
     private JLabel filteredSites;
-    public JTextArea filter;
+    private JTextArea filter;
+    public static String bannedSite;
 
 
     private JPanel centerSuperPanel;
@@ -26,7 +27,7 @@ public class Setting
     private JPanel maxPanel;
     private JLabel maxSimultaneouslyDownloadLabel;
     private JSpinner spinnerDownloads;
-    private static int maxSimultaneouslyDownload = 100;
+    public static int maxSimultaneouslyDownload = 100;
 
     private JPanel pathPanel;
     private JLabel pathLabel;
@@ -65,7 +66,7 @@ public class Setting
         filteredSites.setOpaque(false);
         eastSuperPanel.add(filteredSites, BorderLayout.NORTH);
 
-        filter = new JTextArea();
+        filter = new JTextArea(" ");
         filter.setPreferredSize(new Dimension(100, 200));
         eastSuperPanel.add(filter, BorderLayout.CENTER);
 
@@ -95,6 +96,14 @@ public class Setting
         superPanel.add(eastSuperPanel, BorderLayout.EAST);
 
         frame.getContentPane().add(superPanel);
+        if (DownloadManager.isEnglish)
+        {
+            english();
+        }
+        else
+        {
+            farsi();
+        }
         showFrame();
     }
 
@@ -227,10 +236,6 @@ public class Setting
     {
         return path;
     }
-    public static void setMaxSimultaneouslyDownload(int input)
-    {
-        maxSimultaneouslyDownload = input;
-    }
 
     public static int getMaxSimultaneouslyDownload()
     {
@@ -254,6 +259,8 @@ public class Setting
             else if (e.getSource().equals(confirmButton))
             {
                 System.out.println("confirmButton");
+                bannedSite = filter.getText();
+                System.out.println(bannedSite);
                 try {
                     UIManager.setLookAndFeel(lookAndFeel);
                 } catch (ClassNotFoundException e1) {
@@ -288,6 +295,28 @@ public class Setting
         frame.validate();
         frame.repaint();
         frame.setVisible(true);
+    }
+
+    public void farsi()
+    {
+        filteredSites.setText("آدرس را وارد کنید");
+        frame.setName("تنظیمات");
+        maxSimultaneouslyDownloadLabel.setText(":  حداکثر تعداد دانلود همزمان");
+        lookAndFeelLabel.setText(":  رابط کاربری");
+        cancelButton.setText("انصراف");
+        confirmButton.setText("تایید");
+        pathLabel.setText(":  ذخیره در");
+    }
+
+    public void english()
+    {
+        filteredSites.setText("Enter the URL");
+        frame.setName("Setting");
+        maxSimultaneouslyDownloadLabel.setText("Maximum of Simultaneously Download: ");
+        lookAndFeelLabel.setText("Look and Feel: ");
+        cancelButton.setText("Cancel");
+        confirmButton.setText("Confirm");
+        pathLabel.setText("Save to: ");
     }
 
 }

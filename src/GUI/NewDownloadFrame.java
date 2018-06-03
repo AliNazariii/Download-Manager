@@ -60,6 +60,14 @@ public class NewDownloadFrame extends JFrame
         frame.add(downPanel, BorderLayout.SOUTH);
 
         getRootPane().setDefaultButton(confirmButton);
+        if (DownloadManager.isEnglish)
+        {
+            english();
+        }
+        else
+        {
+            farsi();
+        }
         showFrame();
     }
 
@@ -154,6 +162,30 @@ public class NewDownloadFrame extends JFrame
         setVisible(true);
     }
 
+    public void farsi()
+    {
+        queueOrNotLabel.setText(":  اضافه کردن به صف");
+        checkBox.setText("بله");
+        setName("دانلود جدید");
+        cancelButton.setText("انصراف");
+        confirmButton.setText("تایید");
+        URLLabel.setText(": آدرس");
+        fileChooserButton.setText("انتخاب");
+        pathLabel.setText(":  ذخیره در");
+    }
+
+    public void english()
+    {
+        queueOrNotLabel.setText("add to Queue: ");
+        checkBox.setText("Yes");
+        setName("New Download");
+        cancelButton.setText("Cancel");
+        confirmButton.setText("Confirm");
+        URLLabel.setText("URL: ");
+        fileChooserButton.setText("Browse");
+        pathLabel.setText("Save to: ");
+    }
+
     private class NewDownloadActionListener implements ActionListener
     {
         @Override
@@ -164,9 +196,20 @@ public class NewDownloadFrame extends JFrame
                 System.out.println("fileChooserButton");
                 setFileChooserHttp();
             }
-            if (e.getSource().equals(confirmButton))
+            else if (e.getSource().equals(confirmButton))
             {
-                //if ()
+                if (URLField.getText().contains(Setting.bannedSite))
+                {
+                    System.out.println("ban ban");
+                    JOptionPane.showMessageDialog(frame, "This URL is banned!", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+                if (downloadManager.getDownloadList().getDownloadVector().size() == Setting.maxSimultaneouslyDownload)
+                {
+                    System.out.println("maxSimultaneouslyDownload");
+                    JOptionPane.showMessageDialog(frame, "Maximum number of downloads is " + Setting.maxSimultaneouslyDownload +" !", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
                 System.out.println("confirmButton");
                 Download temp = new Download(URLField.getText(), pathField.getText());
                 if (!checkBox.isSelected())
@@ -187,7 +230,7 @@ public class NewDownloadFrame extends JFrame
                 //setVisible(false); //you can't see me!
                 dispose(); //Destroy the JFrame object
             }
-            if (checkBox.isSelected())
+            else if (checkBox.isSelected())
             {
                 System.out.println("checkBox is Selected");
             }

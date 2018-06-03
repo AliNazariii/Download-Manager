@@ -45,6 +45,13 @@ public class AboutDialog extends JDialog {
         author.setText("کاری از علی نظری");
         startDate.setText("شروع پروژه از 22 اردیبهشت 97");
         finalDate.setText("اتمام پروژه در 14 خرداد 97");
+    }
 
+    public void english()
+    {
+        setName("About");
+        author.setText("By: Ali Nazari");
+        startDate.setText("Started project on 12 May 2018");
+        finalDate.setText("Finished on 3 June 2018");
     }
 }
