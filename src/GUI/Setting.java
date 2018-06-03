@@ -1,7 +1,5 @@
 package GUI;
 
-import Files.SettingFile;
-
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -9,15 +7,19 @@ import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.io.*;
 
 public class Setting
 {
     private JFrame frame;
-
     private JPanel superPanel;
+
+    private JPanel eastSuperPanel;
+    private JLabel filteredSites;
+    public JTextArea filter;
+
+
+    private JPanel centerSuperPanel;
 
     private JPanel centerPanel;
 
@@ -31,7 +33,7 @@ public class Setting
     private JTextField pathField;
     private JFileChooser fileChooser;
     private JButton fileChooserButton;
-    private static String path = "C:\\Users\\Ali_Z\\Desktop";
+    private static String path = "C:\\Users\\Ali\\Desktop";
 
     private JPanel downPanel;
     private JButton cancelButton;
@@ -54,6 +56,24 @@ public class Setting
         superPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         superPanel.setBackground(Color.decode("#dff8d0"));
 
+        eastSuperPanel = new JPanel(new BorderLayout(10, 10));
+        eastSuperPanel.setBackground(Color.decode("#dff8d0"));
+        eastSuperPanel.setOpaque(false);
+
+        filteredSites = new JLabel("Enter the URL", SwingConstants.CENTER);
+        filteredSites.setFont(new Font("Titillium Web", 4, 20));
+        filteredSites.setOpaque(false);
+        eastSuperPanel.add(filteredSites, BorderLayout.NORTH);
+
+        filter = new JTextArea();
+        filter.setPreferredSize(new Dimension(100, 200));
+        eastSuperPanel.add(filter, BorderLayout.CENTER);
+
+
+        centerSuperPanel = new JPanel(new BorderLayout(10, 10));
+        centerSuperPanel.setBackground(Color.decode("#dff8d0"));
+        centerSuperPanel.setOpaque(false);
+
         centerPanel = new JPanel(new GridLayout(3, 1, 10, 10));
         centerPanel.setOpaque(false);
         setMaxSimultaneouslyDownload();
@@ -64,12 +84,15 @@ public class Setting
         lookAndFeel();
         centerPanel.add(lookAndFeelPanel);
 
-        superPanel.add(centerPanel, BorderLayout.CENTER);
+        centerSuperPanel.add(centerPanel, BorderLayout.CENTER);
 
         downPanel = new JPanel(new GridLayout(1, 2, 10, 10));
         downPanel.setOpaque(false);
         buttons();
-        superPanel.add(downPanel, BorderLayout.SOUTH);
+        centerSuperPanel.add(downPanel, BorderLayout.SOUTH);
+
+        superPanel.add(centerSuperPanel, BorderLayout.CENTER);
+        superPanel.add(eastSuperPanel, BorderLayout.EAST);
 
         frame.getContentPane().add(superPanel);
         showFrame();

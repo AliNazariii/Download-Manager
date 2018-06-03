@@ -166,6 +166,7 @@ public class NewDownloadFrame extends JFrame
             }
             if (e.getSource().equals(confirmButton))
             {
+                //if ()
                 System.out.println("confirmButton");
                 Download temp = new Download(URLField.getText(), pathField.getText());
                 if (!checkBox.isSelected())

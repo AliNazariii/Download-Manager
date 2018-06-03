@@ -1,7 +1,6 @@
 package Models;
 
 import java.io.Serializable;
-import java.net.MalformedURLException;
 
 public class Download implements Serializable
 {

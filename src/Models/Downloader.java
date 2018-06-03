@@ -194,6 +194,4 @@ public class Downloader extends SwingWorker<Void, Void>
         return null;
     }
 
-
-
 }
